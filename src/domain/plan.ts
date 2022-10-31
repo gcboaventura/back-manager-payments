@@ -49,3 +49,7 @@ export interface PriceBrackets {
 	overage_price?: number
 	price?: number
 }
+
+export interface AddPlanUseCase {
+	add(plan: PlanEntity): Promise<any>
+}
