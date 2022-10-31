@@ -1,18 +1,20 @@
 export interface PlanEntity {
 	name: string // Max: 64 characters
-	description?: string
+	description: string
 	shippable?: boolean
-	payment_methods?: PaymentMethods[]
-	installments?: number[]
+	payment_methods: PaymentMethods[]
+	start_at: Date
+	installments: number[]
 	minimum_price?: number
 	statement_descriptor?: string
 	currency?: Currency
-	interval?: Interval
-	interval_count?: number
+	interval: Interval
+	interval_count: number
 	trial_period_days?: number
 	billing_type: BillingType
 	billing_days?: number[] // Required if billing_type equals days
 	items: Items[]
+	cycles: number
 }
 
 export type PaymentMethods = 'credit_card' | 'boleto' | 'debit_card'
