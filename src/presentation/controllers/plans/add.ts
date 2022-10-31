@@ -12,7 +12,18 @@ export class AddPlanController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			const requiredFields: string[] = ['name', 'billing_type']
+			const requiredFields: string[] = [
+				'name',
+				'description',
+				'items',
+				'interval',
+				'interval_count',
+				'payment_methods',
+				'start_at',
+				'billing_type',
+				'installments',
+				'cycles'
+			]
 
 			for (const field of requiredFields) {
 				if (!httpRequest.body[field]) {
