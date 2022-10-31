@@ -7,8 +7,8 @@ const app = express()
 
 dotenv.config()
 
-setupRoutes(app)
-
 setupMiddlewares(app)
+
+setupRoutes(app)
 
 export default app
