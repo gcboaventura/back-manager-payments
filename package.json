@@ -4,7 +4,10 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"dev": "nodemon src/main/server.ts",
+		"start": "node dist/main/server.js",
+		"build": "rimraf dist && tsc"
 	},
 	"devDependencies": {
 		"@types/nodemon": "^1.19.2",
