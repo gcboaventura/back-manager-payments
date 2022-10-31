@@ -17,6 +17,13 @@ export interface PlanEntity {
 	cycles: number
 }
 
+export interface PlanModel extends PlanEntity {
+	id: string
+	url: string
+	created_at: string
+	updated_at: string
+}
+
 export type PaymentMethods = 'credit_card' | 'boleto' | 'debit_card'
 
 export type Currency = 'BRL'
@@ -54,4 +61,8 @@ export interface PriceBrackets {
 
 export interface AddPlanUseCase {
 	add(plan: PlanEntity): Promise<any>
+}
+
+export interface GetPlanUseCase {
+	get(id: string): Promise<PlanModel>
 }
