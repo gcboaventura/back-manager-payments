@@ -22,7 +22,9 @@ export class AddClientController implements Controller {
 				'gender',
 				'address',
 				'phones',
-				'birthdate'
+				'birthdate',
+				'plan',
+				'due_date'
 			]
 
 			for (const field of requiredFields) {
