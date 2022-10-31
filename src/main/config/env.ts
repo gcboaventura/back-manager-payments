@@ -9,5 +9,3 @@ export default {
 	DB_PORT: parseInt(process.env.DB_PORT || '3306'),
 	DB_DATABASE: process.env.DB_DATABASE || ''
 }
-
-console.log(process.env.PAGARME_PUBLIC_KEY)
