@@ -1,5 +1,3 @@
-import { ClientEntity } from '../src/domain/client'
-
 declare module 'pagarme' {
 	export namespace client {
 		function connect(authentication: { api_key: string }): Promise<typeof client>
@@ -318,7 +316,17 @@ declare module 'pagarme' {
 		number: string
 	}
 
-	export interface CustomerInput extends ClientEntity {}
+	export interface CustomerInput {
+		id?: string
+		external_id: string
+		name: string
+		type: string
+		country: string
+		email: string
+		documents: Document[]
+		phone_numbers: string[]
+		birthday: string
+	}
 
 	export interface Address {
 		country: string
