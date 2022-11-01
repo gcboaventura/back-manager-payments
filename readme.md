@@ -33,3 +33,13 @@ yarn preapre
 ```
 yarn dev
 ```
+
+## PLANOS
+
+DOC: https://docs.pagar.me/reference/planos-1
+
+- /add-plan
+- /get-plan/:id
+- /list-plan
+- /delete-plan/:id
+- /update-plan
