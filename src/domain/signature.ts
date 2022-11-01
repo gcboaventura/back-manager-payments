@@ -1,4 +1,5 @@
-import { ClientModel } from './client'
+import { Card } from './card'
+import { ClientEntity } from './client'
 import { Currency, Items, PaymentMethods, PlanModel, Status } from './plan'
 
 export interface SignatureEntity {
@@ -6,7 +7,7 @@ export interface SignatureEntity {
 	plan_id: string
 	payment_method: PaymentMethods
 	start_at?: Date
-	customer_id: string
+	customer: ClientEntity
 	card: Card
 	installments?: number
 	discounts?: Discounts[]
@@ -24,35 +25,12 @@ export interface SignatureModel extends SignatureEntity {
 	status: Status
 	created_at: string
 	updated_at: string
-	customer: ClientModel
 	plan: PlanModel
 	items: Items
 }
 
 export interface AddSignatureUseCase {
 	add(signature: SignatureEntity): Promise<SignatureModel>
-}
-
-export interface Card {
-	number: string
-	holder_name?: string
-	holder_document?: string
-	exp_month: number
-	exp_year: number
-	cvv: string
-	brand?: string
-	label?: string
-	billing_address_id?: string
-	billing_address: Address
-}
-
-export interface Address {
-	line_1: string
-	line_2: string
-	zip_code: string
-	city: string
-	state: string
-	country: string
 }
 
 export interface Discounts {
