@@ -66,3 +66,7 @@ export interface AddPlanUseCase {
 export interface GetPlanUseCase {
 	get(id: string): Promise<PlanModel>
 }
+
+export interface ListPlansUseCase {
+	get(query?: string[]): Promise<PlanModel[]>
+}
