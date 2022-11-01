@@ -12,7 +12,13 @@ export class AddSignatureController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			const requiredFields: string[] = ['plan_id', 'payment_method', 'customer_id', 'card']
+			const requiredFields: string[] = [
+				'plan_id',
+				'payment_method',
+				'customer',
+				'card',
+				'installments'
+			]
 
 			for (const field of requiredFields) {
 				if (!httpRequest.body[field]) {
