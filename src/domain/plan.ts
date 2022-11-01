@@ -22,7 +22,10 @@ export interface PlanModel extends PlanEntity {
 	url: string
 	created_at: string
 	updated_at: string
+	status: Status
 }
+
+export type Status = 'active' | 'inactive' | 'deleted'
 
 export type PaymentMethods = 'credit_card' | 'boleto' | 'debit_card'
 
@@ -82,4 +85,8 @@ export interface ListPlansUseCase {
 
 export interface DeletePlanUseCase {
 	delete(id: string): Promise<PlanModel>
+}
+
+export interface UpdatePlanUseCase {
+	update(plan: PlanModel): Promise<PlanModel>
 }
