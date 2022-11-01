@@ -79,3 +79,7 @@ export interface GetPlanUseCase {
 export interface ListPlansUseCase {
 	get(query?: QueryListPlans): Promise<PlanModel[]>
 }
+
+export interface DeletePlanUseCase {
+	delete(id: string): Promise<PlanModel>
+}
