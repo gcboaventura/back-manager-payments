@@ -1,4 +1,4 @@
-import { GetPlanData } from '../../../data/plans/get'
+import { GetPlanData } from '../../../data/plans'
 import { GetPlanPagarme } from '../../../infra/pagar-me/'
 import { GetPlanController } from '../../../presentation/controllers/plans'
 
