@@ -29,6 +29,10 @@ export interface SignatureModel extends SignatureEntity {
 	items: Items
 }
 
+export interface AddSignatureUseCase {
+	add(signature: SignatureEntity): Promise<SignatureModel>
+}
+
 export interface Card {
 	number: string
 	holder_name?: string
