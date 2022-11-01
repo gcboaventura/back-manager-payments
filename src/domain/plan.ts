@@ -59,6 +59,15 @@ export interface PriceBrackets {
 	price?: number
 }
 
+export interface QueryListPlans {
+	name?: string
+	status?: string
+	created_since?: Date
+	created_until?: Date
+	page?: number
+	size?: number
+}
+
 export interface AddPlanUseCase {
 	add(plan: PlanEntity): Promise<any>
 }
@@ -68,5 +77,5 @@ export interface GetPlanUseCase {
 }
 
 export interface ListPlansUseCase {
-	get(query?: string[]): Promise<PlanModel[]>
+	get(query?: QueryListPlans): Promise<PlanModel[]>
 }
