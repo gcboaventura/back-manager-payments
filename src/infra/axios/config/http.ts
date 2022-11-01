@@ -2,10 +2,6 @@ import axios, { Axios } from 'axios'
 import { env } from '../../../main/config'
 import { IncomingHttpHeaders } from 'http'
 
-export enum StatusCode {
-	Unauthorized = 401
-}
-
 const headers: IncomingHttpHeaders = {
 	'content-type': 'application/json',
 	authorization: 'Basic ' + Buffer.from(env.PAGARME_SECRET_KEY).toString('base64')
