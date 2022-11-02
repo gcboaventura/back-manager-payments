@@ -37,6 +37,10 @@ export interface GetSignatureUseCase {
 	get(id: string): Promise<SignatureModel>
 }
 
+export interface DeleteSignatureUseCase {
+	delete(id: string): Promise<SignatureModel>
+}
+
 export interface Discounts {
 	cycles: string
 	value: string
