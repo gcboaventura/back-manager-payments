@@ -13,9 +13,9 @@ export class GetSignatureController implements Controller {
 		try {
 			const { id } = httpRequest.params
 
-			const plan = await this.getSignatureUseCase.get(id)
+			const signature = await this.getSignatureUseCase.get(id)
 
-			return success(plan)
+			return success(signature)
 		} catch (error: unknown) {
 			return serverError(error as Error)
 		}
