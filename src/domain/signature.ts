@@ -33,6 +33,10 @@ export interface AddSignatureUseCase {
 	add(signature: SignatureEntity): Promise<SignatureModel>
 }
 
+export interface GetSignatureUseCase {
+	get(id: string): Promise<SignatureModel>
+}
+
 export interface Discounts {
 	cycles: string
 	value: string
