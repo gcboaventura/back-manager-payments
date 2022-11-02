@@ -5,5 +5,5 @@ import { addSignatureFatory, getSignatureFatory } from '../../factories/signtatu
 export default (router: Router): void => {
 	router.post('/add-signature', adaptRoute(addSignatureFatory()))
 
-	router.post('/get-signature/:id', adaptRoute(getSignatureFatory()))
+	router.get('/get-signature/:id', adaptRoute(getSignatureFatory()))
 }
