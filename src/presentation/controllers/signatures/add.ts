@@ -17,7 +17,8 @@ export class AddSignatureController implements Controller {
 				'payment_method',
 				'customer',
 				'card',
-				'installments'
+				'installments',
+				'start_at'
 			]
 
 			for (const field of requiredFields) {

@@ -6,7 +6,7 @@ export interface SignatureEntity {
 	code?: string
 	plan_id: string
 	payment_method: PaymentMethods
-	start_at?: Date
+	start_at: Date
 	customer: ClientEntity
 	card: Card
 	installments?: number
@@ -27,7 +27,6 @@ export interface SignatureModel extends SignatureEntity {
 	updated_at: string
 	plan: PlanModel
 	items: Items
-	start_at: Date
 }
 
 export interface AddSignatureUseCase {
