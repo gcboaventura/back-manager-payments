@@ -7,5 +7,6 @@ export default {
 	DB_USER: process.env.DB_USER || '',
 	DB_PASSWORD: process.env.DB_PASSWORD || '',
 	DB_PORT: parseInt(process.env.DB_PORT || '3306'),
-	DB_DATABASE: process.env.DB_DATABASE || ''
+	DB_DATABASE: process.env.DB_DATABASE || '',
+	DB_TIMEZONE: process.env.DB_TIMEZONE || ''
 }

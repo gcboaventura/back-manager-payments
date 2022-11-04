@@ -86,3 +86,15 @@ export interface QueryListSignatures {
 	page?: number
 	size?: number
 }
+
+export interface SinatureRepositoryEntity {
+	id_signature: string
+	created_at: string
+	updated_at: string
+}
+
+export interface SignatureRepositoryModel extends SinatureRepositoryEntity {}
+
+export interface AddSignatureRepositoryUseCase {
+	add(data: SinatureRepositoryEntity): Promise<SignatureRepositoryModel>
+}

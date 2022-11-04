@@ -6,5 +6,6 @@ export const connection = mysql.createConnection({
 	user: env.DB_USER,
 	password: env.DB_PASSWORD,
 	port: env.DB_PORT,
-	database: env.DB_DATABASE
+	database: env.DB_DATABASE,
+	timezone: env.DB_TIMEZONE
 })

@@ -8,4 +8,8 @@ export class Date implements DateValidator {
 		const difference = a.diff(b, 'day')
 		return difference
 	}
+
+	insertDb(date: string): string {
+		return moment(date).format('YYYY-MM-DD HH:mm:ss')
+	}
 }

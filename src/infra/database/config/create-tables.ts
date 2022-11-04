@@ -14,8 +14,8 @@ export class CreateTable implements TableModels {
 			`CREATE TABLE IF NOT EXISTS CLIENTS (
 				  id_local INT NOT NULL AUTO_INCREMENT,
 					id_signature VARCHAR(255),
-					created_at DATETIME,
-					updated_at DATETIME,
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
 					PRIMARY KEY (id_local)
 			)`
 		)
