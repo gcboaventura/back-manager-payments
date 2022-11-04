@@ -37,8 +37,8 @@ export interface GetSignatureUseCase {
 	get(id: string): Promise<SignatureModel>
 }
 
-export interface DeleteSignatureUseCase {
-	delete(id: string): Promise<SignatureModel>
+export interface CancelSignatureUseCase {
+	cancel(id: string): Promise<SignatureModel>
 }
 
 export interface Discounts {

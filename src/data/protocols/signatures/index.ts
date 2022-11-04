@@ -1,3 +1,3 @@
 export * from './add'
 export * from './get'
-export * from './delete'
+export * from './cancel'
