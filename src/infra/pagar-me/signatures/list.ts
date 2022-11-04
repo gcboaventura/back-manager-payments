@@ -13,9 +13,6 @@ export class ListSignaturesPagarme implements ListSignaturesInfra {
 				params.length === 0 ? params.push(`?${x[0]}=${x[1]}`) : params.push(`&${x[0]}=${x[1]}`)
 			)
 		}
-		console.log(params)
-
-		console.log(`${url}${params.join('')}`)
 
 		const { data } = await http.get(`${url}${params.join('')}`)
 

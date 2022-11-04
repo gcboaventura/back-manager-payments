@@ -35,7 +35,6 @@ export class UpdateCardSignatureController implements Controller {
 
 			return success(signature)
 		} catch (error: unknown) {
-			console.log(error)
 			return serverError(error as Error)
 		}
 	}
