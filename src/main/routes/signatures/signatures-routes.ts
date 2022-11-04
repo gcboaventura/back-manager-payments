@@ -4,7 +4,8 @@ import {
 	addSignatureFatory,
 	getSignatureFatory,
 	cancelSignatureFatory,
-	updateCardSignatureFatory
+	updateCardSignatureFatory,
+	updateStartDateSignatureFatory
 } from '../../factories/signtatures'
 
 export default (router: Router): void => {
@@ -15,4 +16,6 @@ export default (router: Router): void => {
 	router.delete('/cancel-signature/:id', adaptRoute(cancelSignatureFatory()))
 
 	router.patch('/update-card-signature/:id', adaptRoute(updateCardSignatureFatory()))
+
+	router.patch('/update-start-date-signature/:id', adaptRoute(updateStartDateSignatureFatory()))
 }

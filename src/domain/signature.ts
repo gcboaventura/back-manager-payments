@@ -27,6 +27,7 @@ export interface SignatureModel extends SignatureEntity {
 	updated_at: string
 	plan: PlanModel
 	items: Items
+	start_at: Date
 }
 
 export interface AddSignatureUseCase {
@@ -43,6 +44,10 @@ export interface CancelSignatureUseCase {
 
 export interface UpdateCardSignatureUseCase {
 	update(card: CardUpdate, idSignature: string): Promise<SignatureModel>
+}
+
+export interface UpdateStartDateSignatureUseCase {
+	update(start_at: Date, idSignature: string): Promise<SignatureModel>
 }
 
 export interface Discounts {
