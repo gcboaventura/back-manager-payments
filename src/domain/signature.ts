@@ -1,6 +1,6 @@
 import { Card, CardUpdate } from './card'
 import { ClientEntity } from './client'
-import { Currency, Items, PaymentMethods, PlanModel, Status } from './plan'
+import { BillingType, Currency, Items, PaymentMethods, PlanModel, Status } from './plan'
 
 export interface SignatureEntity {
 	code?: string
@@ -50,6 +50,10 @@ export interface UpdateStartDateSignatureUseCase {
 	update(start_at: Date, idSignature: string): Promise<SignatureModel>
 }
 
+export interface ListSignaturesUseCase {
+	list(query?: QueryListSignatures): Promise<SignatureModel[]>
+}
+
 export interface Discounts {
 	cycles: string
 	value: string
@@ -67,4 +71,19 @@ export interface CurrentCycle {
 	start_at: string
 	end_at: string
 	billing_at: string
+}
+
+export interface QueryListSignatures {
+	status?: Status
+	code?: string
+	billing_type?: BillingType
+	customer_id?: string
+	plan_id?: string
+	card_id?: string
+	next_billing_since?: Date
+	next_billing_until?: Date
+	created_since?: string
+	created_until?: string
+	page?: number
+	size?: number
 }
