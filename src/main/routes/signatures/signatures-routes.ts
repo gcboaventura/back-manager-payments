@@ -3,7 +3,8 @@ import { adaptRoute } from '../../adapters'
 import {
 	addSignatureFatory,
 	getSignatureFatory,
-	cancelSignatureFatory
+	cancelSignatureFatory,
+	updateCardSignatureFatory
 } from '../../factories/signtatures'
 
 export default (router: Router): void => {
@@ -12,4 +13,6 @@ export default (router: Router): void => {
 	router.get('/get-signature/:id', adaptRoute(getSignatureFatory()))
 
 	router.delete('/cancel-signature/:id', adaptRoute(cancelSignatureFatory()))
+
+	router.patch('/update-card-signature/:id', adaptRoute(updateCardSignatureFatory()))
 }

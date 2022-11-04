@@ -1,4 +1,4 @@
-import { Card } from './card'
+import { Card, CardUpdate } from './card'
 import { ClientEntity } from './client'
 import { Currency, Items, PaymentMethods, PlanModel, Status } from './plan'
 
@@ -39,6 +39,10 @@ export interface GetSignatureUseCase {
 
 export interface CancelSignatureUseCase {
 	cancel(id: string): Promise<SignatureModel>
+}
+
+export interface UpdateCardSignatureUseCase {
+	update(card: CardUpdate, idSignature: string): Promise<SignatureModel>
 }
 
 export interface Discounts {
