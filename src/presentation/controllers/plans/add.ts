@@ -15,14 +15,13 @@ export class AddPlanController implements Controller {
 			const requiredFields: string[] = [
 				'name',
 				'description',
-				'items',
 				'interval',
 				'interval_count',
 				'payment_methods',
 				'start_at',
 				'billing_type',
-				'installments',
-				'cycles'
+				'minimum_price',
+				'items'
 			]
 
 			for (const field of requiredFields) {
