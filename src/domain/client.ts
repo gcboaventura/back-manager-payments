@@ -5,7 +5,7 @@ export interface ClientEntity {
 	name: string //max 64 caracteres
 	type: TypePesron
 	email: string //max 64 caracteres
-	code: string //max 52 caracteres
+	code?: string //max 52 caracteres
 	document: string //max 16 caracteres
 	document_type: DocumentType
 	gender: Gender
