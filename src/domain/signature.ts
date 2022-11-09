@@ -1,5 +1,5 @@
 import { Card, CardUpdate } from './card'
-import { ClientEntity } from './client'
+import { Customer } from './customer'
 import { BillingType, Currency, Items, PaymentMethods, PlanModel, Status } from './plan'
 
 export interface SignatureEntity {
@@ -7,7 +7,7 @@ export interface SignatureEntity {
 	plan_id: string
 	payment_method: PaymentMethods
 	start_at: Date
-	customer: ClientEntity
+	customer: Customer
 	card: Card
 	installments?: number
 	discounts?: Discounts[]
