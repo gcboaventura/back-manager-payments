@@ -22,8 +22,9 @@ export interface CardModel extends Card {
 	status: string
 	created_at: string
 	updated_at: string
+	deleted_at: string
 	customer: CustomerModel
-	type: string
+	type: TypeCard
 }
 
 export interface TokenCard {
@@ -36,11 +37,16 @@ export interface TokenCardModel extends Card {
 	id: string
 	first_six_digits: string
 	last_four_digits: string
-	status: string
+	status: Status
 	created_at: string
 	updated_at: string
-	type: string
+	deleted_at: string
+	type: TypeCard
 }
+
+export type Status = 'active' | 'deleted' | 'expired'
+
+export type TypeCard = 'credit' | 'voucher'
 
 export interface AddCardUseCase {
 	add(card: Card): Promise<CardModel>
