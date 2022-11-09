@@ -13,12 +13,35 @@ export interface Customer {
 
 export interface CustomerModel {
 	id: string
-	name: string
-	email: string
 	delinquent: boolean
 	created_at: string
 	updated_at: string
-	phones: any
+}
+
+export interface AddCustomerUseCase {
+	add(customer: Customer): Promise<CustomerModel>
+}
+
+export interface GetCustomerUseCase {
+	get(id: string): Promise<CustomerModel>
+}
+
+export interface UpdateCustomerUseCase {
+	update(customer: CustomerModel): Promise<CustomerModel>
+}
+
+export interface ListCustomersUseCase {
+	list(query?: QueryCustomers): Promise<CustomerModel[]>
+}
+
+export interface QueryCustomers {
+	name?: string
+	document?: string
+	email?: string
+	gender?: Gender
+	page?: number
+	size?: number
+	code?: string
 }
 
 export type TypePesron = 'individual' | 'company'
@@ -28,6 +51,7 @@ export type DocumentType = 'CPF' | 'CNPJ' | 'PASSAPORTE'
 export type Gender = 'male' | 'female'
 
 export interface Address {
+	id?: string
 	country: string
 	state: string
 	city: string
