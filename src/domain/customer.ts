@@ -1,3 +1,5 @@
+import { Address } from './address'
+
 export interface Customer {
 	name: string //max 64 caracteres
 	email: string //max 64 caracteres
@@ -49,16 +51,6 @@ export type TypePesron = 'individual' | 'company'
 export type DocumentType = 'CPF' | 'CNPJ' | 'PASSAPORTE'
 
 export type Gender = 'male' | 'female'
-
-export interface Address {
-	id?: string
-	country: string
-	state: string
-	city: string
-	zip_code: string
-	line_1: string
-	line_2: string
-}
 
 export interface Phones {
 	home_phone?: HomePhone

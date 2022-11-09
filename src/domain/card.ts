@@ -1,3 +1,4 @@
+import { Address } from './address'
 import { CustomerModel } from './customer'
 
 export interface Card {
@@ -23,16 +24,6 @@ export interface CardModel extends Card {
 	updated_at: string
 	customer: CustomerModel
 	type: string
-}
-
-export interface Address {
-	id?: string
-	country: string
-	state: string
-	city: string
-	zip_code: string
-	line_1: string
-	line_2: string
 }
 
 export interface TokenCard {
