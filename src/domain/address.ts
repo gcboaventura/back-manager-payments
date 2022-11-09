@@ -16,6 +16,10 @@ export interface AddressAdd extends Address {
 export interface AddressModel extends Address {
 	id: string
 	customer: CustomerModel
+	deleted_at: string
+	created_at: string
+	updated_at: string
+	status: StatusAddress
 }
 
 export interface AddressUpdate {
@@ -29,6 +33,8 @@ export interface QueryListAddress {
 	page?: number
 	size?: number
 }
+
+export type StatusAddress = 'active' | 'deleted'
 
 export interface AddAddressUseCase {
 	add(address: AddressAdd): Promise<AddressModel>
