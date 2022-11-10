@@ -1,3 +1,3 @@
-export * from './config/connection'
-export * from './config/create-tables'
-export * from './client'
+export * from './config'
+export * from './customer'
+export * from './address'

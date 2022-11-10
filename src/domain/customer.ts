@@ -1,4 +1,5 @@
-import { Address } from './address'
+import { Address, AddressModel } from './address'
+import { GatewayResponse } from './gateway'
 
 export interface Customer {
 	name: string //max 64 caracteres
@@ -15,6 +16,16 @@ export interface Customer {
 
 export interface CustomerModel {
 	id: string
+	name: string //max 64 caracteres
+	email: string //max 64 caracteres
+	code?: string //max 52 caracteres
+	document: string //max 16 caracteres
+	document_type: DocumentType
+	type: TypePesron
+	gender: Gender
+	address: AddressModel
+	phones: Phones
+	birthdate: Date
 	delinquent: boolean
 	created_at: string
 	updated_at: string
@@ -24,8 +35,8 @@ export interface AddCustomerUseCase {
 	add(customer: Customer): Promise<CustomerModel>
 }
 
-export interface LoadCustomerByEmail {
-	get(email: string): Promise<CustomerModel>
+export interface LoadCustomerByEmailUseCase {
+	get(email: string): Promise<GatewayResponse<CustomerModel>>
 }
 
 export interface GetCustomerUseCase {

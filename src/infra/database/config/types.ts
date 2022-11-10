@@ -1,3 +1,4 @@
 export interface TableModels {
-	client(): void
+	customer(): void
+	address(): void
 }

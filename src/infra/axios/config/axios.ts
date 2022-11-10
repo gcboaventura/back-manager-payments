@@ -9,7 +9,7 @@ const headers: IncomingHttpHeaders = {
 
 const baseURL = env.PAGARME_ENDPOINT
 
-export const http: Axios = axios.create({
+export const AXIOS: Axios = axios.create({
 	headers,
 	baseURL,
 	auth: {

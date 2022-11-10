@@ -89,10 +89,10 @@ export interface LastTransaction {
 	card: CardModel
 	created_at: string
 	updated_at: string
-	gateway_response: GatewayResponse
+	gateway_response: GatewayResponseOrder
 }
 
-export interface GatewayResponse {
+export interface GatewayResponseOrder {
 	code: string
 }
 
