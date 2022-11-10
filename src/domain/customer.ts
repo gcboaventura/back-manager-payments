@@ -24,6 +24,10 @@ export interface AddCustomerUseCase {
 	add(customer: Customer): Promise<CustomerModel>
 }
 
+export interface LoadCustomerByEmail {
+	get(email: string): Promise<CustomerModel>
+}
+
 export interface GetCustomerUseCase {
 	get(id: string): Promise<CustomerModel>
 }
