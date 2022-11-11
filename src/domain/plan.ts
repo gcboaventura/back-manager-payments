@@ -21,6 +21,7 @@ export interface PlanModel extends Plan {
 	id: string
 	created_at: string
 	updated_at: string
+	deleted_at: string
 	status: string
 }
 

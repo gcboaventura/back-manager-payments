@@ -98,6 +98,7 @@ export class CreateTable implements TableModels {
 					currency VARCHAR(255),
 					created_at TIMESTAMP,
 					updated_at TIMESTAMP,
+					deleted_at TIMESTAMP,
 
 					PRIMARY KEY (id)
 			)`

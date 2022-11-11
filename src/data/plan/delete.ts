@@ -13,7 +13,7 @@ export class DeletePlanData implements DeletePlanUseCase {
 	async delete(plan_id: string): Promise<PlanModel> {
 		const deleteGateway = await this.deletePlanGateway.delete(plan_id)
 
-		await this.deletePlanRepository.delete(plan_id)
+		await this.deletePlanRepository.delete(plan_id, deleteGateway.deleted_at)
 
 		return deleteGateway
 	}

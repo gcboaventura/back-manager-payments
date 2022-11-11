@@ -9,11 +9,11 @@ export class DeletePlanMysql implements DeletePlanRepository {
 		this.connection = connection
 	}
 
-	async delete(plan_id: string): Promise<PlanModel> {
+	async delete(plan_id: string, deleted_at: string): Promise<PlanModel> {
 		return new Promise((resolve, reject) => {
 			this.connection.query(
-				`DELETE FROM PLANS WHERE id_gateway = ?`,
-				[plan_id],
+				`UPDATE PLANS SET deleted_at = ? WHERE id_gateway = ?`,
+				[deleted_at, plan_id],
 				(error: any, res: any) => {
 					if (error) {
 						reject(error)
