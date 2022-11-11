@@ -32,7 +32,6 @@ export interface CustomerModel {
 }
 
 export interface CustomerUpdateEntity {
-	id: string
 	name: string //max 64 caracteres
 	email: string //max 64 caracteres
 	code?: string //max 52 caracteres
@@ -73,7 +72,7 @@ export interface GetCustomerUseCase {
 }
 
 export interface UpdateCustomerUseCase {
-	update(customer: CustomerUpdateEntity): Promise<CustomerUpdateModel>
+	update(customer: CustomerUpdateEntity, id: string): Promise<CustomerUpdateModel>
 }
 
 export interface ListCustomersUseCase {

@@ -13,10 +13,10 @@ export class UpdateCustomerData implements UpdateCustomerUseCase {
 		this.updateCustomerRepository = updateCustomerRepository
 	}
 
-	async update(customer: CustomerUpdateEntity): Promise<CustomerUpdateModel> {
-		const updateGateway = await this.updateCustomerGateway.update(customer)
+	async update(customer: CustomerUpdateEntity, id: string): Promise<CustomerUpdateModel> {
+		const updateGateway = await this.updateCustomerGateway.update(customer, id)
 
-		await this.updateCustomerRepository.update(updateGateway)
+		await this.updateCustomerRepository.update(updateGateway, id)
 
 		return updateGateway
 	}

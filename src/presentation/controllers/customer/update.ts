@@ -11,7 +11,10 @@ export class UpdateCustomerController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			const customer = await this.updateCustomerUseCase.update(httpRequest.body)
+			const customer = await this.updateCustomerUseCase.update(
+				httpRequest.body,
+				httpRequest.params.id
+			)
 
 			return success(customer)
 		} catch (error: unknown) {

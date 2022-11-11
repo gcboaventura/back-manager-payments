@@ -9,9 +9,8 @@ export class UpdateCustomerMysql implements UpdateCustomerRepository {
 		this.connection = connection
 	}
 
-	async update(customer: CustomerUpdateEntity): Promise<CustomerUpdateModel> {
+	async update(customer: CustomerUpdateEntity, id: string): Promise<CustomerUpdateModel> {
 		const {
-			id,
 			name,
 			email,
 			code,
