@@ -48,3 +48,7 @@ export interface PricingScheme {
 }
 
 export type SchemeType = 'unit' | 'package' | 'volume' | 'tier'
+
+export interface AddPlanUseCase {
+	add(plan: Plan): Promise<PlanModel>
+}
