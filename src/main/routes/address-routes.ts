@@ -4,7 +4,8 @@ import {
 	addAddressFactory,
 	getAddressFactory,
 	updateAddressFactory,
-	listAddressFactory
+	listAddressFactory,
+	deleteAddressFactory
 } from '../factories'
 
 export default (router: Router): void => {
@@ -15,4 +16,6 @@ export default (router: Router): void => {
 	router.put('/customers/:idCustomer/addresses/:idAddress', adaptRoute(updateAddressFactory()))
 
 	router.get('/customers/:id/addresses', adaptRoute(listAddressFactory()))
+
+	router.delete('/customers/:idCustomer/addresses/:idAddress', adaptRoute(deleteAddressFactory()))
 }
