@@ -30,7 +30,7 @@ export class UpdateCardMysql implements UpdateCardRepository {
 
 		return new Promise((resolve, reject) => {
 			this.connection.query(
-				`UPDATE CUSTOMERS SET first_six_digits = ?, last_four_digits = ?, brand = ?, holder_name = ?, holder_document = ?, exp_month = ?, exp_year = ?, status = ?, label = ?, type = ?, updated_at = ? WHERE id_gateway = ?`,
+				`UPDATE CARDS SET first_six_digits = ?, last_four_digits = ?, brand = ?, holder_name = ?, holder_document = ?, exp_month = ?, exp_year = ?, status = ?, label = ?, type = ?, updated_at = ? WHERE id_gateway = ?`,
 				[
 					first_six_digits,
 					last_four_digits,
