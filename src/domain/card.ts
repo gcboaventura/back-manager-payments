@@ -2,7 +2,6 @@ import { Address } from './address'
 import { CustomerModel } from './customer'
 
 export interface Card {
-	customer_id: string
 	number: string
 	holder_name: string
 	exp_month: number
@@ -49,7 +48,7 @@ export type Status = 'active' | 'deleted' | 'expired'
 export type TypeCard = 'credit' | 'voucher'
 
 export interface AddCardUseCase {
-	add(card: Card): Promise<CardModel>
+	add(card: Card, customer_id: string): Promise<CardModel>
 }
 
 export interface GetCardUseCase {

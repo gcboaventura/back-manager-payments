@@ -62,7 +62,6 @@ export class CreateTable implements TableModels {
 				  id INT NOT NULL AUTO_INCREMENT,
 					id_gateway VARCHAR(255),
 					id_customer VARCHAR(255),
-					id_address VARCHAR(255),
 					first_six_digits VARCHAR(255),
 					last_four_digits VARCHAR(255),
 					brand VARCHAR(255),

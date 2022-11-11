@@ -10,8 +10,8 @@ export class AddCardData implements AddCardUseCase {
 		this.addCardRepository = addCardRepository
 	}
 
-	async add(card: Card): Promise<CardModel> {
-		const addGateway = await this.addCardGateway.add(card)
+	async add(card: Card, customer_id: string): Promise<CardModel> {
+		const addGateway = await this.addCardGateway.add(card, customer_id)
 
 		await this.addCardRepository.add(addGateway)
 

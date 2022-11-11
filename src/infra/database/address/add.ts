@@ -31,7 +31,6 @@ export class AddAddressMysql implements AddAddressRepository {
 				],
 				(error: any, res: any) => {
 					if (error) {
-						console.log(error)
 						reject(error)
 					}
 					resolve(res)

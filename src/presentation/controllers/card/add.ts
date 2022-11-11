@@ -11,7 +11,7 @@ export class AddCardController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			const card = await this.addCardUseCase.add(httpRequest.body)
+			const card = await this.addCardUseCase.add(httpRequest.body, httpRequest.params.id)
 
 			return success(card)
 		} catch (error: unknown) {
