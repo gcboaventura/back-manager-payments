@@ -1,4 +1,4 @@
-import { ListCustomersUseCase, CustomerModel, QueryCustomers } from '../../domain'
+import { ListCustomersUseCase, CustomerModel, QueryCustomers, GatewayResponse } from '../../domain'
 import { ListCustomersGateway } from '../protocols'
 
 export class ListCustomersData implements ListCustomersUseCase {
@@ -8,7 +8,7 @@ export class ListCustomersData implements ListCustomersUseCase {
 		this.ListCustomersGateway = ListCustomersGateway
 	}
 
-	async list(query?: QueryCustomers): Promise<CustomerModel[]> {
+	async list(query?: QueryCustomers): Promise<GatewayResponse<CustomerModel[]>> {
 		const customerList = await this.ListCustomersGateway.list(query)
 
 		return customerList

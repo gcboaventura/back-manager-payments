@@ -76,7 +76,7 @@ export interface UpdateCustomerUseCase {
 }
 
 export interface ListCustomersUseCase {
-	list(query?: QueryCustomers): Promise<CustomerModel[]>
+	list(query?: QueryCustomers): Promise<GatewayResponse<CustomerModel[]>>
 }
 
 export interface QueryCustomers {
