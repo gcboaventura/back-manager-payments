@@ -43,7 +43,7 @@ export interface UpdateAddressUseCase {
 }
 
 export interface ListAddressUseCase {
-	list(query: QueryListAddress): Promise<AddressModel[]>
+	list(query: QueryListAddress, customer_id: string): Promise<AddressModel[]>
 }
 
 export interface DeleteAddressUseCase {
