@@ -108,7 +108,7 @@ export type PaymentMethod =
 
 export interface CreditCard {
 	operation_type: OperationType
-	card_token: string
+	card_id: string
 	statement_descriptor: string
 	installments: number
 }
@@ -150,6 +150,10 @@ export interface QueryOrders {
 	created_until?: string
 	page?: number
 	size?: number
+}
+
+export interface AddOrderUseCase {
+	add(order: Order): Promise<OrderModel>
 }
 
 export interface GetOrderUseCase {
