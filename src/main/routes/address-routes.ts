@@ -3,5 +3,5 @@ import { adaptRoute } from '../adapters'
 import { addAddressFactory } from '../factories'
 
 export default (router: Router): void => {
-	router.post('customers/:id/addresses', adaptRoute(addAddressFactory()))
+	router.post('/customers/:id/addresses', adaptRoute(addAddressFactory()))
 }
