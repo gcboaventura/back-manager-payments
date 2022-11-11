@@ -11,7 +11,7 @@ export class GetPlanController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			const plan = await this.getPlanUseCase.get(httpRequest.body)
+			const plan = await this.getPlanUseCase.get(httpRequest.params.id)
 
 			return success(plan)
 		} catch (error: unknown) {
