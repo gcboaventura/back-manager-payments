@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
 import { ListCardsGateway } from '../../../data'
-import { CardModel } from '../../../domain'
+import { CardModel, GatewayResponse } from '../../../domain'
 
 export class ListCardsPagarme implements ListCardsGateway {
 	private readonly axios: Axios
@@ -9,7 +9,7 @@ export class ListCardsPagarme implements ListCardsGateway {
 		this.axios = axios
 	}
 
-	async list(customer_id: string): Promise<CardModel[]> {
+	async list(customer_id: string): Promise<GatewayResponse<CardModel[]>> {
 		const { data } = await this.axios.get(`/customers/${customer_id}/cards`)
 
 		return data

@@ -1,5 +1,6 @@
 import { Address } from './address'
 import { CustomerModel } from './customer'
+import { GatewayResponse } from './gateway'
 
 export interface Card {
 	number: string
@@ -56,7 +57,7 @@ export interface GetCardUseCase {
 }
 
 export interface ListCardsUseCase {
-	list(customer_id: string): Promise<CardModel[]>
+	list(customer_id: string): Promise<GatewayResponse<CardModel[]>>
 }
 
 export interface UpdateCardUseCase {

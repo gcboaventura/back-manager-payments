@@ -1,4 +1,4 @@
-import { ListCardsUseCase, CardModel } from '../../domain'
+import { ListCardsUseCase, CardModel, GatewayResponse } from '../../domain'
 import { ListCardsGateway } from '../protocols'
 
 export class ListCardsData implements ListCardsUseCase {
@@ -8,7 +8,7 @@ export class ListCardsData implements ListCardsUseCase {
 		this.listCardsGateway = listCardsGateway
 	}
 
-	async list(customer_id: string): Promise<CardModel[]> {
+	async list(customer_id: string): Promise<GatewayResponse<CardModel[]>> {
 		const customerList = await this.listCardsGateway.list(customer_id)
 
 		return customerList
