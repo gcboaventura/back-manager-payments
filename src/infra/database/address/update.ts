@@ -14,7 +14,7 @@ export class UpdateAddressMysql implements UpdateAddressRepository {
 
 		return new Promise((resolve, reject) => {
 			this.connection.query(
-				`UPDATE CARDS SET line_2 = ? WHERE id_gateway = ?`,
+				`UPDATE ADDRESS SET line_2 = ? WHERE id_gateway = ?`,
 				[line_2, id],
 				(error: any, res: any) => {
 					if (error) {
