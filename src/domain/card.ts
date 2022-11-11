@@ -9,7 +9,7 @@ export interface Card {
 	exp_year: number
 	cvv: string
 	holder_document?: string
-	brand?: string
+	brand: string
 	label?: string
 	billing_address_id?: string
 	billing_address: Address
