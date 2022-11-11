@@ -1,3 +1,5 @@
+import { GatewayResponse } from './gateway'
+
 export interface Plan {
 	name: string
 	description: string
@@ -52,4 +54,29 @@ export type SchemeType = 'unit' | 'package' | 'volume' | 'tier'
 
 export interface AddPlanUseCase {
 	add(plan: Plan): Promise<PlanModel>
+}
+
+export interface GetPlanUseCase {
+	get(plan_id: string): Promise<PlanModel>
+}
+
+export interface UpdatePlanUseCase {
+	update(plan: Plan, plan_id: string): Promise<PlanModel>
+}
+
+export interface DeletePlanUseCase {
+	delete(plan_id: string): Promise<PlanModel>
+}
+
+export interface ListPlansUseCase {
+	list(query?: QueryPlan): Promise<GatewayResponse<PlanModel[]>>
+}
+
+export interface QueryPlan {
+	name?: string
+	status?: string
+	created_since?: string
+	created_until?: string
+	page?: number
+	size?: number
 }
