@@ -31,7 +31,7 @@ export class UpdateCustomerMysql implements UpdateCustomerRepository {
 
 		return new Promise((resolve, reject) => {
 			this.connection.query(
-				`UPDATE CUSTOMERS SET name = ?, email = ?, code = ?, document = ?, document_type = ?, type = ?, gender = ?, birthdate = ?, phone = ? updated_at = ? WHERE id_gateway = ?`,
+				`UPDATE CUSTOMERS SET name = ?, email = ?, code = ?, document = ?, document_type = ?, type = ?, gender = ?, birthdate = ?, phone = ?, updated_at = ? WHERE id_gateway = ?`,
 				[
 					name,
 					email,
