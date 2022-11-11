@@ -1,3 +1,4 @@
 export * from './customer'
 export * from './card'
-export * from './address'
+export * as AddressProtocols from './address'
+export * from './bin'
