@@ -1,4 +1,5 @@
 import { CustomerModel } from './customer'
+import { GatewayResponse } from './gateway'
 
 export interface Address {
 	country: string
@@ -43,7 +44,7 @@ export interface UpdateAddressUseCase {
 }
 
 export interface ListAddressUseCase {
-	list(query: QueryListAddress, customer_id: string): Promise<AddressModel[]>
+	list(query: QueryListAddress, customer_id: string): Promise<GatewayResponse<AddressModel[]>>
 }
 
 export interface DeleteAddressUseCase {
