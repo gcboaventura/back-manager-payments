@@ -9,10 +9,6 @@ export interface Address {
 	line_2: string
 }
 
-export interface AddressAdd extends Address {
-	customer_id: string
-}
-
 export interface AddressModel extends Address {
 	id: string
 	customer: CustomerModel
@@ -37,7 +33,7 @@ export interface QueryListAddress {
 export type StatusAddress = 'active' | 'deleted'
 
 export interface AddAddressUseCase {
-	add(address: AddressAdd): Promise<AddressModel>
+	add(address: Address, customer_id: string): Promise<AddressModel>
 }
 
 export interface GetAddressUseCase {
