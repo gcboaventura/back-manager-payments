@@ -19,8 +19,6 @@ export interface AddressModel extends Address {
 }
 
 export interface AddressUpdate {
-	customer_id: string
-	address_id: string
 	line_2: string
 }
 
@@ -41,7 +39,7 @@ export interface GetAddressUseCase {
 }
 
 export interface UpdateAddressUseCase {
-	update(address: AddressUpdate): Promise<AddressModel>
+	update(address: AddressUpdate, customer_id: string, address_id: string): Promise<AddressModel>
 }
 
 export interface ListAddressUseCase {
