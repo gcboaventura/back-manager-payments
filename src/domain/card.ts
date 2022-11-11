@@ -61,7 +61,7 @@ export interface ListCardsUseCase {
 }
 
 export interface UpdateCardUseCase {
-	update(card: CardModel): Promise<CardModel>
+	update(customer_id: string, card_id: string, card: Card): Promise<CardModel>
 }
 
 export interface DeleteCardUseCase {
