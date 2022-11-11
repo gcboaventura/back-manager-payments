@@ -10,7 +10,7 @@ export class UpdateCustomerPagarme implements UpdateCustomerGateway {
 	}
 
 	async update(customer: CustomerUpdateEntity, id: string): Promise<CustomerUpdateModel> {
-		const { data } = await this.axios.post(
+		const { data } = await this.axios.put(
 			`/customers/${id}`,
 			Object.assign({}, customer, { id: undefined })
 		)
