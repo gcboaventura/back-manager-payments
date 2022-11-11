@@ -1,4 +1,4 @@
-import { UpdateCustomerUseCase, CustomerModel } from '../../domain'
+import { UpdateCustomerUseCase, CustomerUpdateEntity, CustomerUpdateModel } from '../../domain'
 import { UpdateCustomerGateway, UpdateCustomerRepository } from '../protocols'
 
 export class UpdateCustomerData implements UpdateCustomerUseCase {
@@ -13,7 +13,7 @@ export class UpdateCustomerData implements UpdateCustomerUseCase {
 		this.updateCustomerRepository = updateCustomerRepository
 	}
 
-	async update(customer: CustomerModel): Promise<CustomerModel> {
+	async update(customer: CustomerUpdateEntity): Promise<CustomerUpdateModel> {
 		const updateGateway = await this.updateCustomerGateway.update(customer)
 
 		await this.updateCustomerRepository.update(updateGateway)

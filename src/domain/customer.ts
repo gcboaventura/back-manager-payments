@@ -31,6 +31,35 @@ export interface CustomerModel {
 	updated_at: string
 }
 
+export interface CustomerUpdateEntity {
+	id: string
+	name: string //max 64 caracteres
+	email: string //max 64 caracteres
+	code?: string //max 52 caracteres
+	document: string //max 16 caracteres
+	document_type: DocumentType
+	type: TypePesron
+	gender: Gender
+	phones: Phones
+	birthdate: Date
+}
+
+export interface CustomerUpdateModel {
+	id: string
+	name: string //max 64 caracteres
+	email: string //max 64 caracteres
+	code?: string //max 52 caracteres
+	document: string //max 16 caracteres
+	document_type: DocumentType
+	type: TypePesron
+	gender: Gender
+	phones: Phones
+	birthdate: Date
+	delinquent: boolean
+	created_at: string
+	updated_at: string
+}
+
 export interface AddCustomerUseCase {
 	add(customer: Customer): Promise<CustomerModel>
 }
@@ -44,7 +73,7 @@ export interface GetCustomerUseCase {
 }
 
 export interface UpdateCustomerUseCase {
-	update(customer: CustomerModel): Promise<CustomerModel>
+	update(customer: CustomerUpdateEntity): Promise<CustomerUpdateModel>
 }
 
 export interface ListCustomersUseCase {
