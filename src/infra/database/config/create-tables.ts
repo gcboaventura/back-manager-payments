@@ -8,6 +8,7 @@ export class CreateTable implements TableModels {
 		this.connection = connection
 		this.address()
 		this.customer()
+		this.card()
 	}
 
 	customer(): void {
@@ -47,6 +48,31 @@ export class CreateTable implements TableModels {
 					state VARCHAR(255),
 					country VARCHAR(255),
 					status VARCHAR(255),
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
+	card(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS CARDS (
+				  id INT NOT NULL AUTO_INCREMENT,
+					id_gateway VARCHAR(255),
+					id_customer VARCHAR(255),
+					id_address VARCHAR(255),
+					first_six_digits VARCHAR(255),
+					last_four_digits VARCHAR(255),
+					brand VARCHAR(255),
+					holder_name VARCHAR(255),
+					holder_document VARCHAR(255),
+					exp_month VARCHAR(255),
+					exp_year VARCHAR(255),
+					status VARCHAR(255),
+					label VARCHAR(255),
+					type VARCHAR(255),
 					created_at TIMESTAMP,
 					updated_at TIMESTAMP,
 
