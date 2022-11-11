@@ -1,5 +1,5 @@
 import { Connection } from 'mysql'
-import { UpdateAddressRepository } from '../../../data'
+import { UpdateAddressRepository } from '../../../data/protocols/address'
 import { AddressModel } from '../../../domain'
 
 export class UpdateAddressMysql implements UpdateAddressRepository {

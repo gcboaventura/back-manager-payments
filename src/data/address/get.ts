@@ -1,5 +1,5 @@
 import { GetAddressUseCase, AddressModel } from '../../domain'
-import { GetAddressGateway } from '../protocols'
+import { GetAddressGateway } from '../protocols/address'
 
 export class GetAddressData implements GetAddressUseCase {
 	private readonly GetAddressGateway: GetAddressGateway

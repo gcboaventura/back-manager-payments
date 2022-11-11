@@ -1,5 +1,6 @@
 import { AddAddressUseCase, Address, AddressModel } from '../../domain'
-import { AddAddressGateway, AddAddressRepository } from '../protocols'
+import { AddAddressRepository } from '../protocols'
+import { AddAddressGateway } from '../protocols/address'
 
 export class AddAddressData implements AddAddressUseCase {
 	private readonly addAddressGateway: AddAddressGateway

@@ -1,5 +1,5 @@
 import { Axios } from 'axios'
-import { ListAddressGateway } from '../../../data'
+import { ListAddressGateway } from '../../../data/protocols/address'
 import { AddressModel, GatewayResponse, QueryListAddress } from '../../../domain'
 
 export class ListAddressPagarme implements ListAddressGateway {

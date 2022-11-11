@@ -1,5 +1,5 @@
 import { Axios } from 'axios'
-import { UpdateAddressGateway } from '../../../data'
+import { UpdateAddressGateway } from '../../../data/protocols/address'
 import { AddressModel, AddressUpdate } from '../../../domain'
 
 export class UpdateAddressPagarme implements UpdateAddressGateway {

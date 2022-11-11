@@ -1,5 +1,5 @@
 import { Axios } from 'axios'
-import { DeleteAddressGateway } from '../../../data'
+import { DeleteAddressGateway } from '../../../data/protocols/address'
 import { AddressModel } from '../../../domain'
 
 export class DeleteAddressPagarme implements DeleteAddressGateway {

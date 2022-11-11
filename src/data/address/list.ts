@@ -1,5 +1,5 @@
 import { ListAddressUseCase, AddressModel, QueryListAddress, GatewayResponse } from '../../domain'
-import { ListAddressGateway } from '../protocols'
+import { ListAddressGateway } from '../protocols/address'
 
 export class ListAddressData implements ListAddressUseCase {
 	private readonly listAddressGateway: ListAddressGateway

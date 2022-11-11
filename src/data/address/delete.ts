@@ -1,5 +1,5 @@
 import { DeleteAddressUseCase, AddressModel } from '../../domain'
-import { DeleteAddressGateway, DeleteAddressRepository } from '../protocols'
+import { DeleteAddressGateway, DeleteAddressRepository } from '../protocols/address'
 
 export class DeleteAddressData implements DeleteAddressUseCase {
 	private readonly deleteAddressGateway: DeleteAddressGateway
