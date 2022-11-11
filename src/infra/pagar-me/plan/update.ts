@@ -10,7 +10,7 @@ export class UpdatePlanPagarme implements UpdatePlanGateway {
 	}
 
 	async update(plan: Plan, plan_id: string): Promise<PlanModel> {
-		const { data } = await this.axios.post(`/plans/${plan_id}`, plan)
+		const { data } = await this.axios.put(`/plans/${plan_id}`, plan)
 		return data
 	}
 }
