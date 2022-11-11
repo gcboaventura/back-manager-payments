@@ -19,6 +19,7 @@ export interface PlanModel extends Plan {
 	id: string
 	created_at: string
 	updated_at: string
+	status: string
 }
 
 export type PaymentMethodPlan =

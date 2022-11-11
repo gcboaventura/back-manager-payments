@@ -13,13 +13,45 @@ export class AddPlanMysql implements AddPlanRepository {
 	}
 
 	async add(plan: PlanModel): Promise<PlanModel> {
+		const {
+			id,
+			name,
+			description,
+			statement_descriptor,
+			minimum_price,
+			interval,
+			billing_type,
+			payment_methods,
+			currency,
+			created_at,
+			updated_at,
+			status
+		} = plan
+
 		return new Promise((resolve, reject) => {
-			this.connection.query(`INSERT INTO PLANS () VALUES()`, [], (error: any, res: any) => {
-				if (error) {
-					reject(error)
+			this.connection.query(
+				`INSERT INTO PLANS (id_gateway, name, description, statement_descriptor, minimum_price, interval_plan, billing_type, payment_methods, status, currency, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+				[
+					id,
+					name,
+					description,
+					statement_descriptor,
+					minimum_price,
+					interval,
+					billing_type,
+					payment_methods,
+					status,
+					currency,
+					this.dateUtils.insertDb(created_at),
+					this.dateUtils.insertDb(updated_at)
+				],
+				(error: any, res: any) => {
+					if (error) {
+						reject(error)
+					}
+					resolve(res)
 				}
-				resolve(res)
-			})
+			)
 		})
 	}
 }
