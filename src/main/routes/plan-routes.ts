@@ -5,5 +5,5 @@ import { addPlanFactory, getPlanFactory } from '../factories'
 export default (router: Router): void => {
 	router.post('/plans', adaptRoute(addPlanFactory()))
 
-	router.post('/plans/:id', adaptRoute(getPlanFactory()))
+	router.get('/plans/:id', adaptRoute(getPlanFactory()))
 }
