@@ -16,7 +16,7 @@ export class AddItemPlanData implements AddItemPlanUseCase {
 	async add(plan_id: string, item: Items): Promise<ResponseHandleItemsPlans> {
 		const addGateway = await this.addItemPlanGateway.add(plan_id, item)
 
-		await this.addItemPlanRepository.add(addGateway)
+		await this.addItemPlanRepository.add(addGateway, plan_id)
 
 		return addGateway
 	}

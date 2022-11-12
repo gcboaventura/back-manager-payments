@@ -3,5 +3,5 @@ import { AddItemPlanUseCase, ItemModelPlan, ResponseHandleItemsPlans } from '../
 export interface AddItemPlanGateway extends AddItemPlanUseCase {}
 
 export interface AddItemPlanRepository {
-	add(item: ItemModelPlan): Promise<ResponseHandleItemsPlans>
+	add(item: ItemModelPlan, plan_id: string): Promise<ResponseHandleItemsPlans>
 }
