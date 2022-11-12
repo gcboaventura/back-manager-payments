@@ -18,4 +18,6 @@ export default (router: Router): void => {
 	router.delete('/subscriptions/:id', adaptRoute(cancelSignatureFactory()))
 
 	router.post('/subscriptions/:id/items', adaptRoute(AddItemSignatureFactory()))
+
+	router.get('/subscriptions/:id/items', adaptRoute(AddItemSignatureFactory()))
 }
