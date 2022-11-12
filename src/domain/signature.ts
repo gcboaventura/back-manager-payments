@@ -89,7 +89,23 @@ export interface UpdateCreditCardSignatureUseCase {
 }
 
 export interface AddItemSignatureUseCase {
-	add(subscription_id: string, item: ItemsModel): Promise<SignatureModel>
+	add(subscription_id: string, item: ItemsModel): Promise<ResponseHandleItemSignature>
+}
+
+export interface ListItemsSignatureUseCase {
+	list(subscription_id: string, query?: QueryItemSignature): Promise<GatewayResponse<ItemsModel[]>>
+}
+
+export interface UpdateItemSignatureUseCase {
+	update(
+		subscription_id: string,
+		item_id: string,
+		item: ItemSignature
+	): Promise<ResponseHandleItemSignature>
+}
+
+export interface DeleteItemSignatureUseCase {
+	delete(subscription_id: string, item_id: string): Promise<ResponseHandleItemSignature>
 }
 
 export interface QuerySignatures {
@@ -112,4 +128,34 @@ export interface ItemSignature {
 	quantity: string
 	description: string
 	pricing_scheme: PricingSchemeSignature
+}
+
+export interface QueryItemSignature {
+	status?: string
+	name?: string
+	description?: string
+	created_since?: string
+	created_until?: string
+	cycle?: number
+	page?: number
+	size?: number
+}
+
+export interface ResponseHandleItemSignature extends ItemsModel {
+	subscription: {
+		id: string
+		code: string
+		start_at: string
+		interval: string
+		interval_count: string
+		billing_type: string
+		next_billing_at: string
+		payment_method: string
+		currency: string
+		statement_descriptor: string
+		installments: number
+		status: string
+		created_at: string
+		updated_at: string
+	}
 }
