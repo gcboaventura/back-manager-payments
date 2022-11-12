@@ -34,6 +34,7 @@ export interface SignatureModel {
 	status: string
 	created_at: string
 	updated_at: string
+	canceled_at: string
 	customer: CustomerModel
 	plan: PlanModel
 	items: ItemsModel[]
@@ -54,6 +55,7 @@ export interface ItemsModel {
 	name: string
 	quantity: string
 	description: string
+	status: string
 	created_at: string
 	updated_at: string
 	pricing_scheme: PricingSchemeSignature

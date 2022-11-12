@@ -7,5 +7,5 @@ export interface AddSignatureRepository {
 }
 
 export interface AddItemsSignatureRepository {
-	add(signature: SignatureModel): Promise<SignatureModel>
+	add(signature: SignatureModel): Promise<void>
 }

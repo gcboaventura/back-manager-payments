@@ -3,4 +3,6 @@ export interface TableModels {
 	address(): void
 	card(): void
 	plans(): void
+	signatures(): void
+	items(): void
 }

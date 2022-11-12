@@ -10,6 +10,8 @@ export class CreateTable implements TableModels {
 		this.customer()
 		this.card()
 		this.plans()
+		this.items()
+		this.signatures()
 	}
 
 	customer(): void {
@@ -99,6 +101,54 @@ export class CreateTable implements TableModels {
 					created_at TIMESTAMP,
 					updated_at TIMESTAMP,
 					deleted_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
+	signatures(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS SIGNATURES (
+				  id INT NOT NULL AUTO_INCREMENT,
+					id_gateway VARCHAR(255),
+					id_customer VARCHAR(255),
+					id_plan VARCHAR(255),
+					code VARCHAR(255),
+					start_at TIMESTAMP,
+					interval_signature VARCHAR(255),
+					interval_count VARCHAR(255),
+					billing_type VARCHAR(255),
+					next_billing_at VARCHAR(255),
+					payment_method VARCHAR(255),
+					currency VARCHAR(255),
+					statement_descriptor VARCHAR(255),
+					installments VARCHAR(255),
+					status VARCHAR(255),
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
+					canceled_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
+	items(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS ITEMS (
+				  id INT NOT NULL AUTO_INCREMENT,
+					id_gateway VARCHAR(255),
+					id_customer VARCHAR(255),
+					id_signature VARCHAR(255),
+					name VARCHAR(255),
+					description VARCHAR(255),
+					quantity VARCHAR(255),
+					status VARCHAR(255),
+					price VARCHAR(255),
+					scheme_type VARCHAR(255),
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
 
 					PRIMARY KEY (id)
 			)`
