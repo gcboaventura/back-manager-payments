@@ -8,7 +8,7 @@ import {
 	connection
 } from '../../../infra'
 
-export const DeleteItemSignatureFactory = (): DeleteItemSignatureController => {
+export const deleteItemSignatureFactory = (): DeleteItemSignatureController => {
 	const deleteItemSignatureGateway = new DeleteItemSignaturePagarme(AXIOS)
 
 	const dateUtils = new DateUtils()
