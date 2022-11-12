@@ -6,7 +6,8 @@ import {
 	updatePlanFactory,
 	deletePlanFactory,
 	listPlansFactory,
-	addItemPlanFactory
+	addItemPlanFactory,
+	updateItemPlanFactory
 } from '../factories'
 
 export default (router: Router): void => {
@@ -21,4 +22,6 @@ export default (router: Router): void => {
 	router.get('/plans', adaptRoute(listPlansFactory()))
 
 	router.post('/plans/:id/items', adaptRoute(addItemPlanFactory()))
+
+	router.put('/plans/:idPlan/items/:idItem', adaptRoute(updateItemPlanFactory()))
 }
