@@ -35,7 +35,7 @@ export class AddSignatureMysql implements AddSignatureRepository {
 		return new Promise((resolve, reject) => {
 			this.connection.query(
 				`INSERT INTO SIGNATURES (id_gateway, id_customer, id_plan, code, start_at, interval_signature, interval_count, billing_type, next_billing_at,
-					payment_method, currency, statement_descriptor, installments, status, created_at, updated_at, canceled_at) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+					payment_method, currency, statement_descriptor, installments, status, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 				[
 					id,
 					customer.id,
