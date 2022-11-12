@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
 import { AddItemPlanRepository } from '../../../data'
-import { ItemModelPlan, ItemsModel, ResponseHandleItemsPlans } from '../../../domain'
+import { ItemModelPlan, ResponseHandleItemsPlans } from '../../../domain'
 import { DateModel } from '../../../utils/date/types'
 
 export class AddItemsSignatureMysql implements AddItemPlanRepository {
