@@ -73,6 +73,18 @@ export interface ListPlansUseCase {
 	list(query?: QueryPlan): Promise<GatewayResponse<PlanModel[]>>
 }
 
+export interface AddItemPlanUseCase {
+	add(plan_id: string, item: Items): Promise<ResponseHandleItemsPlans>
+}
+
+export interface UpdateItemPlanUseCase {
+	update(plan_id: string, item_id: string, item: ItemModelPlan): Promise<ResponseHandleItemsPlans>
+}
+
+export interface DeleteItemPlanUseCase {
+	delete(plan_id: string, item_id: string): Promise<ResponseHandleItemsPlans>
+}
+
 export interface QueryPlan {
 	name?: string
 	status?: string
@@ -80,4 +92,17 @@ export interface QueryPlan {
 	created_until?: string
 	page?: number
 	size?: number
+}
+
+export interface ItemModelPlan extends Items {
+	id: string
+	cycles: number
+	status: string
+	created_at: string
+	updated_at: string
+	deleted_at: string
+}
+
+export interface ResponseHandleItemsPlans extends ItemModelPlan {
+	plan: PlanModel
 }
