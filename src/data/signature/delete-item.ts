@@ -14,10 +14,10 @@ export class DeleteItemSignatureData implements DeleteItemSignatureUseCase {
 	}
 
 	async delete(subscription_id: string, item_id: string): Promise<ResponseHandleItemSignature> {
-		const addGateway = await this.deleteItemSignatureGateway.delete(subscription_id, item_id)
+		const deleteGateway = await this.deleteItemSignatureGateway.delete(subscription_id, item_id)
 
-		await this.deleteItemSignatureRepository.delete(subscription_id, item_id)
+		await this.deleteItemSignatureRepository.delete(deleteGateway)
 
-		return addGateway
+		return deleteGateway
 	}
 }
