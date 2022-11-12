@@ -56,15 +56,15 @@ export interface ItemsModel {
 	description: string
 	created_at: string
 	updated_at: string
-	pricing_scheme: PricingScheme
+	pricing_scheme: PricingSchemeSignature
 }
 
-export interface PricingScheme {
-	scheme_type: SchemeType
+export interface PricingSchemeSignature {
+	scheme_type: SchemeTypeSignature
 	price: number
 }
 
-export type SchemeType = 'unit' | 'package' | 'volume' | 'tier'
+export type SchemeTypeSignature = 'unit' | 'package' | 'volume' | 'tier'
 
 export interface AddSignatureUseCase {
 	add(signature: Signature): Promise<SignatureModel>
@@ -109,5 +109,5 @@ export interface ItemSignature {
 	name: string
 	quantity: string
 	description: string
-	pricing_scheme: PricingScheme
+	pricing_scheme: PricingSchemeSignature
 }
