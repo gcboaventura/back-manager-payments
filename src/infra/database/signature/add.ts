@@ -52,8 +52,7 @@ export class AddSignatureMysql implements AddSignatureRepository {
 					installments,
 					status,
 					this.dateUtils.insertDb(created_at),
-					this.dateUtils.insertDb(updated_at),
-					this.dateUtils.insertDb(canceled_at)
+					this.dateUtils.insertDb(updated_at)
 				],
 				(error: any, res: any) => {
 					if (error) {
