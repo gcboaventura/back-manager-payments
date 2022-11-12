@@ -89,7 +89,7 @@ export interface UpdateCreditCardSignatureUseCase {
 }
 
 export interface AddItemSignatureUseCase {
-	update(subscription_id: string, item: ItemSignature): Promise<SignatureModel>
+	add(subscription_id: string, item: ItemSignature): Promise<SignatureModel>
 }
 
 export interface QuerySignatures {
