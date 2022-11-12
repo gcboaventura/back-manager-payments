@@ -16,7 +16,7 @@ export class CancelSignatureData implements CancelSignatureUseCase {
 	async cancel(signature_id: string): Promise<SignatureModel> {
 		const cancelGateway = await this.cancelSignatureGateway.cancel(signature_id)
 
-		await this.cancelSignatureRepository.cancel(signature_id)
+		await this.cancelSignatureRepository.cancel(signature_id, cancelGateway.canceled_at)
 
 		return cancelGateway
 	}
