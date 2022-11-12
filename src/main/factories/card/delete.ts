@@ -1,6 +1,12 @@
 import { DeleteCardData } from '../../../data'
 import { DeleteCardController } from '../../../presentation'
-import { DeleteCardPagarme, AXIOS, DeleteCardMysql, connection } from '../../../infra'
+import {
+	DeleteCardPagarme,
+	AXIOS,
+	DeleteCardMysql,
+	connection,
+	ListSignaturesPagarme
+} from '../../../infra'
 
 export const deleteCardFactory = (): DeleteCardController => {
 	const deleteCardGateway = new DeleteCardPagarme(AXIOS)
@@ -9,5 +15,7 @@ export const deleteCardFactory = (): DeleteCardController => {
 
 	const deleteCardUseCase = new DeleteCardData(deleteCardGateway, deleteCardRepository)
 
-	return new DeleteCardController(deleteCardUseCase)
+	const ligSignatureGateway = new ListSignaturesPagarme(AXIOS)
+
+	return new DeleteCardController(deleteCardUseCase, ligSignatureGateway)
 }
