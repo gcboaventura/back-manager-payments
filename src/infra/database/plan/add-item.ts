@@ -3,7 +3,7 @@ import { AddItemPlanRepository } from '../../../data'
 import { ItemModelPlan, ResponseHandleItemsPlans } from '../../../domain'
 import { DateModel } from '../../../utils/date/types'
 
-export class AddItemsSignatureMysql implements AddItemPlanRepository {
+export class AddItemPlanMysql implements AddItemPlanRepository {
 	private readonly connection: Connection
 	private readonly dateUtils: DateModel
 
