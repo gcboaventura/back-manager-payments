@@ -3,5 +3,5 @@ import { ItemModelPlan, ResponseHandleItemsPlans, UpdateItemPlanUseCase } from '
 export interface UpdateItemPlanGateway extends UpdateItemPlanUseCase {}
 
 export interface UpdateItemPlanRepository {
-	update(plan: ItemModelPlan): Promise<ResponseHandleItemsPlans>
+	update(item: ItemModelPlan): Promise<ResponseHandleItemsPlans>
 }
