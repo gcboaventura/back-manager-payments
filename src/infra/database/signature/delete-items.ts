@@ -3,7 +3,7 @@ import { DeleteItemSignatureRepository } from '../../../data'
 import { ItemsModel, ResponseHandleItemSignature } from '../../../domain'
 import { DateModel } from '../../../utils/date/types'
 
-export class AddItemsSignatureMysql implements DeleteItemSignatureRepository {
+export class DeleteItemSignatureMysql implements DeleteItemSignatureRepository {
 	private readonly connection: Connection
 	private readonly dateUtils: DateModel
 
