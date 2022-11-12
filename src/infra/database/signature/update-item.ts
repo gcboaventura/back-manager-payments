@@ -3,7 +3,7 @@ import { UpdateItemSignatureRepository } from '../../../data'
 import { ItemsModel, ResponseHandleItemSignature } from '../../../domain'
 import { DateModel } from '../../../utils/date/types'
 
-export class UpdateItemsSignatureMysql implements UpdateItemSignatureRepository {
+export class UpdateItemSignatureMysql implements UpdateItemSignatureRepository {
 	private readonly connection: Connection
 	private readonly dateUtils: DateModel
 

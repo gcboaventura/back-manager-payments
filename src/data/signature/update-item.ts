@@ -1,8 +1,8 @@
 import { UpdateItemSignatureGateway, UpdateItemSignatureRepository } from '../protocols'
 import {
 	UpdateItemSignatureUseCase,
-	ItemSignature,
-	ResponseHandleItemSignature
+	ResponseHandleItemSignature,
+	UpdateItemSignature
 } from '../../domain'
 
 export class UpdateItemSignatureData implements UpdateItemSignatureUseCase {
@@ -20,7 +20,7 @@ export class UpdateItemSignatureData implements UpdateItemSignatureUseCase {
 	async update(
 		subscription_id: string,
 		item_id: string,
-		item: ItemSignature
+		item: UpdateItemSignature
 	): Promise<ResponseHandleItemSignature> {
 		const updateGateway = await this.updateItemSignatureGateway.update(
 			subscription_id,

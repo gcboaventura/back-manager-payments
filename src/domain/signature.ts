@@ -100,7 +100,7 @@ export interface UpdateItemSignatureUseCase {
 	update(
 		subscription_id: string,
 		item_id: string,
-		item: ItemSignature
+		item: UpdateItemSignature
 	): Promise<ResponseHandleItemSignature>
 }
 
@@ -128,6 +128,10 @@ export interface ItemSignature {
 	quantity: string
 	description: string
 	pricing_scheme: PricingSchemeSignature
+}
+
+export interface UpdateItemSignature extends ItemSignature {
+	status: string
 }
 
 export interface QueryItemSignature {

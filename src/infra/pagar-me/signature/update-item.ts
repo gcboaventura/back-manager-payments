@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
 import { UpdateItemSignatureGateway } from '../../../data'
-import { ItemSignature, ResponseHandleItemSignature } from '../../../domain'
+import { ResponseHandleItemSignature, UpdateItemSignature } from '../../../domain'
 
 export class UpdateItemSignaturePagarme implements UpdateItemSignatureGateway {
 	private readonly axios: Axios
@@ -12,7 +12,7 @@ export class UpdateItemSignaturePagarme implements UpdateItemSignatureGateway {
 	async update(
 		subscription_id: string,
 		item_id: string,
-		item: ItemSignature
+		item: UpdateItemSignature
 	): Promise<ResponseHandleItemSignature> {
 		const { data } = await this.axios.put(
 			`/subscriptions/${subscription_id}/items/${item_id}`,

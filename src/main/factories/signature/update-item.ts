@@ -3,7 +3,7 @@ import { UpdateItemSignatureController } from '../../../presentation'
 import { DateUtils } from '../../../utils'
 import {
 	UpdateItemSignaturePagarme,
-	UpdateItemsSignatureMysql,
+	UpdateItemSignatureMysql,
 	AXIOS,
 	connection
 } from '../../../infra'
@@ -13,7 +13,7 @@ export const updateItemSignatureFactory = (): UpdateItemSignatureController => {
 
 	const dateUtils = new DateUtils()
 
-	const updateItemsSignatureRepository = new UpdateItemsSignatureMysql(connection, dateUtils)
+	const updateItemsSignatureRepository = new UpdateItemSignatureMysql(connection, dateUtils)
 
 	const updateItemSignatureUseCase = new UpdateItemSignatureData(
 		UpdateItemSignatureGateway,
