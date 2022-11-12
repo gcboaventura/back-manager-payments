@@ -6,12 +6,12 @@ export class CreateTable implements TableModels {
 
 	constructor(connection: Connection) {
 		this.connection = connection
-		this.address()
-		this.customer()
-		this.card()
-		this.plans()
 		this.items()
 		this.signatures()
+		this.plans()
+		this.card()
+		this.address()
+		this.customer()
 	}
 
 	customer(): void {
