@@ -6,4 +6,5 @@ export interface TableModels {
 	itemsPlan(): void
 	signatures(): void
 	itemsSignature(): void
+	orders(): void
 }

@@ -6,6 +6,7 @@ export class CreateTable implements TableModels {
 
 	constructor(connection: Connection) {
 		this.connection = connection
+		this.orders()
 		this.itemsSignature()
 		this.signatures()
 		this.itemsPlan()
@@ -162,6 +163,7 @@ export class CreateTable implements TableModels {
 				  id INT NOT NULL AUTO_INCREMENT,
 					id_gateway VARCHAR(255),
 					id_signature VARCHAR(255),
+					id_order VARCHAR(255),
 					name VARCHAR(255),
 					description VARCHAR(255),
 					quantity VARCHAR(255),
@@ -171,6 +173,28 @@ export class CreateTable implements TableModels {
 					created_at TIMESTAMP,
 					updated_at TIMESTAMP,
 					deleted_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
+	orders(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS ORDERS (
+				  id INT NOT NULL AUTO_INCREMENT,
+					id_gateway VARCHAR(255),
+					id_item VARCHAR(255),
+					id_signature VARCHAR(255),
+					id_charge VARCHAR(255),
+					closed BOOLEAN,
+					code VARCHAR(255),
+					amount VARCHAR(255),
+					currency VARCHAR(255),
+					status VARCHAR(255),
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
+					closed_at TIMESTAMP,
 
 					PRIMARY KEY (id)
 			)`
