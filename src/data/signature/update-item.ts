@@ -28,7 +28,7 @@ export class UpdateItemSignatureData implements UpdateItemSignatureUseCase {
 			item
 		)
 
-		await this.updateItemSignatureRepository.update(subscription_id, item_id, item)
+		await this.updateItemSignatureRepository.update(updateGateway)
 
 		return updateGateway
 	}
