@@ -14,10 +14,10 @@ export class DeleteItemPlanData implements DeleteItemPlanUseCase {
 	}
 
 	async delete(plan_id: string, item_id: string): Promise<ResponseHandleItemsPlans> {
-		const addGateway = await this.deleteItemPlanGateway.delete(plan_id, item_id)
+		const deleteGateway = await this.deleteItemPlanGateway.delete(plan_id, item_id)
 
-		await this.deleteItemPlanRepository.delete(plan_id, item_id)
+		await this.deleteItemPlanRepository.delete(deleteGateway.deleted_at, item_id)
 
-		return addGateway
+		return deleteGateway
 	}
 }
