@@ -1,6 +1,6 @@
 import { AddPlanData } from '../../../data'
 import { AddPlanController } from '../../../presentation'
-import { AddPlanMysql, AddPlanPagarme, AXIOS, connection } from '../../../infra'
+import { AddItemPlanMysql, AddPlanMysql, AddPlanPagarme, AXIOS, connection } from '../../../infra'
 import { DateUtils } from '../../../utils'
 
 export const addPlanFactory = (): AddPlanController => {
@@ -10,7 +10,9 @@ export const addPlanFactory = (): AddPlanController => {
 
 	const addPlanRepository = new AddPlanMysql(connection, dateUtils)
 
-	const addPlanUseCase = new AddPlanData(addPlanGateway, addPlanRepository)
+	const addItemsPlanRepository = new AddItemPlanMysql(connection, dateUtils)
+
+	const addPlanUseCase = new AddPlanData(addPlanGateway, addPlanRepository, addItemsPlanRepository)
 
 	return new AddPlanController(addPlanUseCase)
 }

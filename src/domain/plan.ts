@@ -17,12 +17,26 @@ export interface Plan {
 	items: Items[]
 }
 
-export interface PlanModel extends Plan {
+export interface PlanModel {
 	id: string
 	created_at: string
 	updated_at: string
 	deleted_at: string
 	status: string
+	name: string
+	description: string
+	shippable?: boolean
+	payment_methods: PaymentMethodPlan[]
+	installments: number
+	minimum_price: number
+	statement_descriptor: string
+	currency: 'BRL'
+	interval: Interval
+	interval_count: number
+	trial_period_days: number
+	billing_type: BillingType
+	billing_days?: number
+	items: ItemModelPlan[]
 }
 
 export type PaymentMethodPlan =
