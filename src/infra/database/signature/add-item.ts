@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
 import { AddItemSignatureRepository } from '../../../data'
-import { ItemsModel, SignatureModel } from '../../../domain'
+import { ItemsModel } from '../../../domain'
 import { DateModel } from '../../../utils/date/types'
 
 export class AddItemsSignatureMysql implements AddItemSignatureRepository {
@@ -12,7 +12,7 @@ export class AddItemsSignatureMysql implements AddItemSignatureRepository {
 		this.dateUtils = dateUtils
 	}
 
-	async add(subscription_id: string, item: ItemsModel): Promise<SignatureModel> {
+	async add(subscription_id: string, item: ItemsModel): Promise<void> {
 		return new Promise((resolve, reject) => {
 			this.connection.query(
 				`INSERT INTO ITEMS_ADDED_TO_SIGNATURE (id_gateway, id_signature, name, description, quantity, status, price, scheme_type, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,

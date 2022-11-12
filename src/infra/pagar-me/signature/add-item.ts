@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
 import { AddItemSignatureGateway } from '../../../data'
-import { ItemSignature, SignatureModel } from '../../../domain'
+import { ItemSignature, ResponseHandleItemSignature } from '../../../domain'
 
 export class AddItemSignaturePagarme implements AddItemSignatureGateway {
 	private readonly axios: Axios
@@ -9,7 +9,7 @@ export class AddItemSignaturePagarme implements AddItemSignatureGateway {
 		this.axios = axios
 	}
 
-	async add(subscription_id: string, item: ItemSignature): Promise<SignatureModel> {
+	async add(subscription_id: string, item: ItemSignature): Promise<ResponseHandleItemSignature> {
 		const { data } = await this.axios.post(`/subscriptions/${subscription_id}/items`, item)
 		return data
 	}

@@ -89,7 +89,7 @@ export interface UpdateCreditCardSignatureUseCase {
 }
 
 export interface AddItemSignatureUseCase {
-	add(subscription_id: string, item: ItemsModel): Promise<ResponseHandleItemSignature>
+	add(subscription_id: string, item: ItemSignature): Promise<ResponseHandleItemSignature>
 }
 
 export interface ListItemsSignatureUseCase {

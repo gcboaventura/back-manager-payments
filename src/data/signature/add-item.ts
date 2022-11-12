@@ -1,4 +1,4 @@
-import { AddItemSignatureUseCase, ItemSignature, SignatureModel } from '../../domain'
+import { AddItemSignatureUseCase, ItemSignature, ResponseHandleItemSignature } from '../../domain'
 import { AddItemSignatureGateway, AddItemSignatureRepository } from '../protocols'
 
 export class AddItemSignatureData implements AddItemSignatureUseCase {
@@ -13,10 +13,10 @@ export class AddItemSignatureData implements AddItemSignatureUseCase {
 		this.addItemSignatureRepository = addItemSignatureRepository
 	}
 
-	async add(subscription_id: string, item: ItemSignature): Promise<SignatureModel> {
+	async add(subscription_id: string, item: ItemSignature): Promise<ResponseHandleItemSignature> {
 		const addGateway = await this.addItemSignatureGateway.add(subscription_id, item)
 
-		await this.addItemSignatureRepository.add(subscription_id, item)
+		await this.addItemSignatureRepository.add(subscription_id, addGateway)
 
 		return addGateway
 	}
