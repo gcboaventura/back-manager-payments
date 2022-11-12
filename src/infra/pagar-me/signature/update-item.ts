@@ -14,7 +14,7 @@ export class UpdateItemSignaturePagarme implements UpdateItemSignatureGateway {
 		item_id: string,
 		item: ItemSignature
 	): Promise<ResponseHandleItemSignature> {
-		const { data } = await this.axios.post(
+		const { data } = await this.axios.put(
 			`/subscriptions/${subscription_id}/items/${item_id}`,
 			item
 		)

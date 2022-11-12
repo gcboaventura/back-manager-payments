@@ -8,7 +8,7 @@ import {
 	connection
 } from '../../../infra'
 
-export const UpdateItemSignatureFactory = (): UpdateItemSignatureController => {
+export const updateItemSignatureFactory = (): UpdateItemSignatureController => {
 	const UpdateItemSignatureGateway = new UpdateItemSignaturePagarme(AXIOS)
 
 	const dateUtils = new DateUtils()
