@@ -4,7 +4,8 @@ import {
 	addSignatureFactory,
 	cancelSignatureFactory,
 	getSignatureFactory,
-	listSignaturesFactory
+	listSignaturesFactory,
+	AddItemSignatureFactory
 } from '../factories'
 
 export default (router: Router): void => {
@@ -15,4 +16,6 @@ export default (router: Router): void => {
 	router.get('/subscriptions', adaptRoute(listSignaturesFactory()))
 
 	router.delete('/subscriptions/:id', adaptRoute(cancelSignatureFactory()))
+
+	router.post('/subscriptions/:id/items', adaptRoute(AddItemSignatureFactory()))
 }

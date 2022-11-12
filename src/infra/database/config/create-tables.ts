@@ -6,8 +6,9 @@ export class CreateTable implements TableModels {
 
 	constructor(connection: Connection) {
 		this.connection = connection
-		this.items()
+		this.itemsSignature()
 		this.signatures()
+		this.itemsPlan()
 		this.plans()
 		this.card()
 		this.address()
@@ -107,6 +108,26 @@ export class CreateTable implements TableModels {
 		)
 	}
 
+	itemsPlan(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS ITEMS_PLAN (
+				  id INT NOT NULL AUTO_INCREMENT,
+					id_gateway VARCHAR(255),
+					id_plan VARCHAR(255),
+					name VARCHAR(255),
+					description VARCHAR(255),
+					quantity VARCHAR(255),
+					status VARCHAR(255),
+					price VARCHAR(255),
+					scheme_type VARCHAR(255),
+					created_at TIMESTAMP,
+					updated_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
 	signatures(): void {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS SIGNATURES (
@@ -134,12 +155,11 @@ export class CreateTable implements TableModels {
 		)
 	}
 
-	items(): void {
+	itemsSignature(): void {
 		this.connection.query(
-			`CREATE TABLE IF NOT EXISTS ITEMS (
+			`CREATE TABLE IF NOT EXISTS ITEMS_ADDED_TO_SIGNATURE (
 				  id INT NOT NULL AUTO_INCREMENT,
 					id_gateway VARCHAR(255),
-					id_customer VARCHAR(255),
 					id_signature VARCHAR(255),
 					name VARCHAR(255),
 					description VARCHAR(255),

@@ -3,6 +3,7 @@ export interface TableModels {
 	address(): void
 	card(): void
 	plans(): void
+	itemsPlan(): void
 	signatures(): void
-	items(): void
+	itemsSignature(): void
 }
