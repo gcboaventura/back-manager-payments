@@ -85,7 +85,7 @@ export interface CancelSignatureUseCase {
 }
 
 export interface UpdateCreditCardSignatureUseCase {
-	update(card: string | Card): Promise<SignatureModel>
+	update(card_id: string, card: Card): Promise<SignatureModel>
 }
 
 export interface UpdateItemSignatureUseCase {
