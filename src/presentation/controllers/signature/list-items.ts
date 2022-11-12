@@ -18,6 +18,7 @@ export class ListItemsSignatureController implements Controller {
 
 			return success(itemsList)
 		} catch (error: unknown) {
+			console.log(error)
 			return serverError(error as Error)
 		}
 	}
