@@ -1,5 +1,6 @@
 import { AddCustomerUseCase, LoadCustomerByEmailUseCase } from '../../../domain'
-import { serverError, success } from '../../helpers'
+import { MissingParamError } from '../../errors'
+import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 
 export class AddCustomerController implements Controller {
@@ -22,6 +23,24 @@ export class AddCustomerController implements Controller {
 
 			if (customerExists.data.length > 0) {
 				return success(customerExists)
+			}
+
+			const requiredFields: string[] = [
+				'name',
+				'email',
+				'document',
+				'document_type',
+				'type',
+				'gender',
+				'address',
+				'phones',
+				'birthdate'
+			]
+
+			for (const field of requiredFields) {
+				if (!httpRequest.body[field]) {
+					return badRequest(new MissingParamError(field))
+				}
 			}
 
 			const customer = await this.addCustomerUseCase.add(httpRequest.body)

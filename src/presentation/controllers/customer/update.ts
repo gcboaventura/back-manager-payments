@@ -1,5 +1,6 @@
 import { UpdateCustomerUseCase } from '../../../domain'
-import { serverError, success } from '../../helpers'
+import { MissingParamError } from '../../errors'
+import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 
 export class UpdateCustomerController implements Controller {
@@ -15,6 +16,24 @@ export class UpdateCustomerController implements Controller {
 				httpRequest.body,
 				httpRequest.params.id
 			)
+
+			const requiredFields: string[] = [
+				'name',
+				'email',
+				'document',
+				'document_type',
+				'type',
+				'gender',
+				'address',
+				'phones',
+				'birthdate'
+			]
+
+			for (const field of requiredFields) {
+				if (!httpRequest.body[field]) {
+					return badRequest(new MissingParamError(field))
+				}
+			}
 
 			return success(customer)
 		} catch (error: unknown) {
