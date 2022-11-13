@@ -1,4 +1,3 @@
-import { GetCustomerGateway } from '../../../data'
 import { AddAddressUseCase, GetCustomerUseCase } from '../../../domain'
 import { MissingParamError } from '../../errors'
 import { badRequest, serverError, success } from '../../helpers'
@@ -8,7 +7,7 @@ export class AddAddressController implements Controller {
 	private readonly addAddressUseCase: AddAddressUseCase
 	private readonly getCustomerUseCase: GetCustomerUseCase
 
-	constructor(addAddressUseCase: AddAddressUseCase, getCustomerUseCase: GetCustomerGateway) {
+	constructor(addAddressUseCase: AddAddressUseCase, getCustomerUseCase: GetCustomerUseCase) {
 		this.addAddressUseCase = addAddressUseCase
 		this.getCustomerUseCase = getCustomerUseCase
 	}

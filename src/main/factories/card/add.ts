@@ -1,4 +1,4 @@
-import { AddCardData } from '../../../data'
+import { AddCardData, ListCardsData } from '../../../data'
 import { AddCardController } from '../../../presentation'
 import { DateUtils } from '../../../utils'
 import { AddCardMysql, AddCardPagarme, AXIOS, connection, ListCardsPagarme } from '../../../infra'
@@ -14,5 +14,7 @@ export const addCardFactory = (): AddCardController => {
 
 	const listCardsGateway = new ListCardsPagarme(AXIOS)
 
-	return new AddCardController(addCardUseCase, listCardsGateway)
+	const listCardsUseCase = new ListCardsData(listCardsGateway)
+
+	return new AddCardController(addCardUseCase, listCardsUseCase)
 }
