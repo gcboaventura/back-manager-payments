@@ -9,7 +9,7 @@ export class GetSignaturePagarme implements GetSignatureGateway {
 		this.axios = axios
 	}
 
-	async get(signature_id: string): Promise<SignatureModel[]> {
+	async get(signature_id: string): Promise<SignatureModel> {
 		const { data } = await this.axios.get(`/subscriptions/${signature_id}`)
 		return data
 	}

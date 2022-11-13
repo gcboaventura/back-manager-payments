@@ -8,7 +8,7 @@ export class GetSignatureData implements GetSignatureUseCase {
 		this.GetSignatureGateway = GetSignatureGateway
 	}
 
-	async get(signature_id: string): Promise<SignatureModel[]> {
+	async get(signature_id: string): Promise<SignatureModel> {
 		const signatureGateway = await this.GetSignatureGateway.get(signature_id)
 
 		return signatureGateway

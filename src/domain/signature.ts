@@ -1,4 +1,4 @@
-import { Card } from './card'
+import { Card, CardModel } from './card'
 import { Customer, CustomerModel } from './customer'
 import { GatewayResponse } from './gateway'
 import { PlanModel } from './plan'
@@ -36,6 +36,7 @@ export interface SignatureModel {
 	updated_at: string
 	canceled_at: string
 	customer: CustomerModel
+	card: CardModel
 	plan: PlanModel
 	items: ItemsModel[]
 }
@@ -74,7 +75,7 @@ export interface AddSignatureUseCase {
 }
 
 export interface GetSignatureUseCase {
-	get(signature_id: string): Promise<SignatureModel[]>
+	get(signature_id: string): Promise<SignatureModel>
 }
 
 export interface ListSignaturesUseCase {

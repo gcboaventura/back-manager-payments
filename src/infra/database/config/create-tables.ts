@@ -184,8 +184,7 @@ export class CreateTable implements TableModels {
 			`CREATE TABLE IF NOT EXISTS ORDERS (
 				  id INT NOT NULL AUTO_INCREMENT,
 					id_gateway VARCHAR(255),
-					id_item VARCHAR(255),
-					id_signature VARCHAR(255),
+					id_customer VARCHAR(255),
 					id_charge VARCHAR(255),
 					closed BOOLEAN,
 					code VARCHAR(255),

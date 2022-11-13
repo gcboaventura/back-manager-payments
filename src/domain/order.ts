@@ -22,7 +22,7 @@ export interface OrderModel {
 	updated_at: string
 	closed_at: string
 	status: string
-	charges: Charges
+	charges: Charges[]
 }
 
 export interface ItemsOrder {

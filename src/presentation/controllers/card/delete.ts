@@ -18,18 +18,14 @@ export class DeleteCardController implements Controller {
 
 			const signatures = await this.cardSignatureList.list({ card_id: idCard })
 
-			const signatureActive = (signatures.data || []).map((x: any) => {
+			signatures.data.map((x: any) => {
 				if (x.status === 'active') {
-					return x
+					return badRequest({
+						message: 'Este cartão não pode ser excluído, possui assinatura ativa.',
+						name: 'badRequest'
+					})
 				}
 			})
-
-			if (signatureActive) {
-				return badRequest({
-					message: 'Este cartão não pode ser excluído, possui assinatura ativa.',
-					name: 'badRequest'
-				})
-			}
 
 			const card = await this.deleteCardUseCase.delete(idCustomer, idCard)
 
