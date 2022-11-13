@@ -20,9 +20,9 @@ export class AddDeviceController implements Controller {
 				}
 			}
 
-			const device = await this.addDeviceUseCase.add(httpRequest.body)
+			await this.addDeviceUseCase.add(httpRequest.body)
 
-			return success(device)
+			return success()
 		} catch (error: unknown) {
 			return serverError(error as Error)
 		}
