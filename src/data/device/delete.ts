@@ -1,4 +1,4 @@
-import { DeleteDeviceUseCase, Device, DeviceModel } from '../../domain'
+import { DeleteDeviceUseCase, DeviceModel } from '../../domain'
 import { DeleteDeviceRepository } from '../protocols'
 
 export class DeleteDeviceData implements DeleteDeviceUseCase {
