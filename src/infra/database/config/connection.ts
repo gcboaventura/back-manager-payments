@@ -1,7 +1,7 @@
 import mysql from 'mysql'
 import { env } from '../../../main/config'
 
-export const connection = mysql.createPool({
+export const connection = mysql.createConnection({
 	host: env.DB_HOST,
 	user: env.DB_USER,
 	password: env.DB_PASSWORD,
