@@ -9,8 +9,8 @@ export class ListCardsData implements ListCardsUseCase {
 	}
 
 	async list(customer_id: string): Promise<GatewayResponse<CardModel[]>> {
-		const customerList = await this.listCardsGateway.list(customer_id)
+		const cardList = await this.listCardsGateway.list(customer_id)
 
-		return customerList
+		return cardList
 	}
 }

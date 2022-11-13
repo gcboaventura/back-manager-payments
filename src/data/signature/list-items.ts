@@ -17,8 +17,8 @@ export class ListItemsSignatureData implements ListItemsSignatureUseCase {
 		subscription_id: string,
 		query?: QueryItemSignature
 	): Promise<GatewayResponse<ItemsModel[]>> {
-		const signaturesGateway = await this.listItemsSignatureGateway.list(subscription_id, query)
+		const itemsSignatureGateway = await this.listItemsSignatureGateway.list(subscription_id, query)
 
-		return signaturesGateway
+		return itemsSignatureGateway
 	}
 }

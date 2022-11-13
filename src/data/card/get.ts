@@ -9,8 +9,8 @@ export class GetCardData implements GetCardUseCase {
 	}
 
 	async get(customer_id: string, card_id: string): Promise<CardModel> {
-		const customer = await this.getCardGateway.get(customer_id, card_id)
+		const card = await this.getCardGateway.get(customer_id, card_id)
 
-		return customer
+		return card
 	}
 }

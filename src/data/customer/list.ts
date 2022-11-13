@@ -2,14 +2,14 @@ import { ListCustomersUseCase, CustomerModel, QueryCustomers, GatewayResponse } 
 import { ListCustomersGateway } from '../protocols'
 
 export class ListCustomersData implements ListCustomersUseCase {
-	private readonly ListCustomersGateway: ListCustomersGateway
+	private readonly listCustomersGateway: ListCustomersGateway
 
-	constructor(ListCustomersGateway: ListCustomersGateway) {
-		this.ListCustomersGateway = ListCustomersGateway
+	constructor(listCustomersGateway: ListCustomersGateway) {
+		this.listCustomersGateway = listCustomersGateway
 	}
 
 	async list(query?: QueryCustomers): Promise<GatewayResponse<CustomerModel[]>> {
-		const customerList = await this.ListCustomersGateway.list(query)
+		const customerList = await this.listCustomersGateway.list(query)
 
 		return customerList
 	}

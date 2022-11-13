@@ -1,4 +1,4 @@
-import { UpdateItemPlanUseCase, Items, ResponseHandleItemsPlans, ItemModelPlan } from '../../domain'
+import { UpdateItemPlanUseCase, ResponseHandleItemsPlans, ItemModelPlan } from '../../domain'
 import { UpdateItemPlanGateway, UpdateItemPlanRepository } from '../protocols'
 
 export class UpdateItemPlanData implements UpdateItemPlanUseCase {

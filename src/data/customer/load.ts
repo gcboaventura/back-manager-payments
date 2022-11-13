@@ -2,14 +2,14 @@ import { LoadCustomerByEmailUseCase, CustomerModel, GatewayResponse } from '../.
 import { LoadCustomerByEmailGateway } from '../protocols'
 
 export class LoadCustomerByEmailData implements LoadCustomerByEmailUseCase {
-	private readonly LoadCustomerByEmailGateway: LoadCustomerByEmailGateway
+	private readonly loadCustomerByEmailGateway: LoadCustomerByEmailGateway
 
-	constructor(LoadCustomerByEmailGateway: LoadCustomerByEmailGateway) {
-		this.LoadCustomerByEmailGateway = LoadCustomerByEmailGateway
+	constructor(loadCustomerByEmailGateway: LoadCustomerByEmailGateway) {
+		this.loadCustomerByEmailGateway = loadCustomerByEmailGateway
 	}
 
 	async get(email: string): Promise<GatewayResponse<CustomerModel>> {
-		const customer = await this.LoadCustomerByEmailGateway.get(email)
+		const customer = await this.loadCustomerByEmailGateway.get(email)
 
 		return customer
 	}

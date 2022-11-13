@@ -12,8 +12,8 @@ export class ListAddressData implements ListAddressUseCase {
 		query: QueryListAddress,
 		customer_id: string
 	): Promise<GatewayResponse<AddressModel[]>> {
-		const address = await this.listAddressGateway.list(query, customer_id)
+		const addressList = await this.listAddressGateway.list(query, customer_id)
 
-		return address
+		return addressList
 	}
 }

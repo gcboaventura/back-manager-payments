@@ -11,10 +11,10 @@ export class DeleteCardData implements DeleteCardUseCase {
 	}
 
 	async delete(customer_id: string, card_id: string): Promise<CardModel> {
-		const addGateway = await this.deleteCardGateway.delete(customer_id, card_id)
+		const deleteGateway = await this.deleteCardGateway.delete(customer_id, card_id)
 
 		await this.deleteCardRepository.delete(customer_id, card_id)
 
-		return addGateway
+		return deleteGateway
 	}
 }

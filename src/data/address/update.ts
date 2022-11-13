@@ -18,10 +18,10 @@ export class UpdateAddressData implements UpdateAddressUseCase {
 		customer_id: string,
 		address_id: string
 	): Promise<AddressModel> {
-		const addGateway = await this.updateAddressGateway.update(address, customer_id, address_id)
+		const updateGateway = await this.updateAddressGateway.update(address, customer_id, address_id)
 
-		await this.updateAddressRepository.update(addGateway)
+		await this.updateAddressRepository.update(updateGateway)
 
-		return addGateway
+		return updateGateway
 	}
 }

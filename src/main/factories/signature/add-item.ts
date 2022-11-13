@@ -11,7 +11,7 @@ import {
 	GetSignaturePagarme
 } from '../../../infra'
 
-export const AddItemSignatureFactory = (): AddItemSignatureController => {
+export const addItemSignatureFactory = (): AddItemSignatureController => {
 	const addItemSignatureGateway = new AddItemSignaturePagarme(AXIOS)
 
 	const dateUtils = new DateUtils()
