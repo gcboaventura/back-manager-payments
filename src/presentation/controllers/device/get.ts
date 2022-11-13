@@ -11,9 +11,9 @@ export class GetDeviceController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			await this.getDeviceUseCase.get(httpRequest.params.id)
+			const device = await this.getDeviceUseCase.get(httpRequest.params.id)
 
-			return success()
+			return success(device)
 		} catch (error: unknown) {
 			return serverError(error as Error)
 		}
