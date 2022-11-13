@@ -1,4 +1,4 @@
-import { AddAddressData } from '../../../data'
+import { AddAddressData, GetCustomerData } from '../../../data'
 import { AddAddressController } from '../../../presentation'
 import { DateUtils } from '../../../utils'
 import {
@@ -18,7 +18,9 @@ export const addAddressFactory = (): AddAddressController => {
 
 	const addAddressUseCase = new AddAddressData(addAddressGateway, addAddressRepository)
 
-	const getCustomerRepository = new GetCustomerPagarme(AXIOS)
+	const getCustomerGateway = new GetCustomerPagarme(AXIOS)
 
-	return new AddAddressController(addAddressUseCase, getCustomerRepository)
+	const getCustomerUseCase = new GetCustomerData(getCustomerGateway)
+
+	return new AddAddressController(addAddressUseCase, getCustomerUseCase)
 }
