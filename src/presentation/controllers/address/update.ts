@@ -1,5 +1,6 @@
 import { UpdateAddressUseCase } from '../../../domain'
-import { serverError, success } from '../../helpers'
+import { MissingParamError } from '../../errors'
+import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 
 export class UpdateAddressController implements Controller {
@@ -12,6 +13,14 @@ export class UpdateAddressController implements Controller {
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
 			const { idCustomer, idAddress } = httpRequest.params
+
+			const requiredFields: string[] = ['line_2']
+
+			for (const field of requiredFields) {
+				if (!httpRequest.body[field]) {
+					return badRequest(new MissingParamError(field))
+				}
+			}
 
 			const address = await this.updateAddressUseCase.update(
 				httpRequest.body,
