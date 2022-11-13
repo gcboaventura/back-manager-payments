@@ -9,4 +9,12 @@ export class DateUtils implements DateModel {
 	daysInMonth(): number {
 		return moment().daysInMonth()
 	}
+
+	currentDay(): number {
+		return moment().date()
+	}
+
+	daysToEndOfMonth(): number {
+		return this.daysInMonth() - this.currentDay()
+	}
 }

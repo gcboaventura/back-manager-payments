@@ -5,6 +5,7 @@ export interface Device {
 
 export interface DeviceModel extends Device {
 	id: number
+	proportional_value: number
 }
 
 export interface AddDeviceUseCase {
@@ -25,4 +26,8 @@ export interface ListDevicesUseCase {
 
 export interface DeleteDeviceUseCase {
 	delete(id: number): Promise<DeviceModel>
+}
+
+export interface GetDeviceProportionalValueUseCase {
+	get(id: number): Promise<DeviceModel>
 }

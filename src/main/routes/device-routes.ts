@@ -4,7 +4,8 @@ import {
 	addDeviceFactory,
 	deleteDeviceFactory,
 	getDeviceFactory,
-	updateDeviceFactory
+	updateDeviceFactory,
+	getDeviceProportionalValueFactory
 } from '../factories'
 
 export default (router: Router): void => {
@@ -15,4 +16,6 @@ export default (router: Router): void => {
 	router.put('/devices/:id', adaptRoute(updateDeviceFactory()))
 
 	router.delete('/devices/:id', adaptRoute(deleteDeviceFactory()))
+
+	router.get('/devices/:id/proportional', adaptRoute(getDeviceProportionalValueFactory()))
 }
