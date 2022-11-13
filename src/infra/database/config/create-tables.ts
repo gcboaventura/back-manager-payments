@@ -6,6 +6,7 @@ export class CreateTable implements TableModels {
 
 	constructor(connection: Connection) {
 		this.connection = connection
+		this.devices()
 		this.orders()
 		this.itemsSignature()
 		this.signatures()
@@ -194,6 +195,18 @@ export class CreateTable implements TableModels {
 					created_at TIMESTAMP,
 					updated_at TIMESTAMP,
 					closed_at TIMESTAMP,
+
+					PRIMARY KEY (id)
+			)`
+		)
+	}
+
+	devices(): void {
+		this.connection.query(
+			`CREATE TABLE IF NOT EXISTS DEVICES (
+				  id INT NOT NULL AUTO_INCREMENT,
+					name VARCHAR(255),
+					full_price VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`

@@ -7,4 +7,5 @@ export interface TableModels {
 	signatures(): void
 	itemsSignature(): void
 	orders(): void
+	devices(): void
 }
