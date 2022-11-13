@@ -27,14 +27,12 @@ export class GetDeviceProportionalValueController implements Controller {
 
 			const proportionalValue = valuePerDay * daysToEndOfMonth
 
-			const resultDevice: DeviceModel = {
+			return success({
 				full_price: device[0].full_price,
 				id: device[0].id,
 				name: device[0].name,
 				proportional_value: proportionalValue
-			}
-
-			return success(resultDevice)
+			})
 		} catch (error: unknown) {
 			return serverError(error as Error)
 		}

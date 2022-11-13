@@ -15,6 +15,6 @@ export class DateUtils implements DateModel {
 	}
 
 	daysToEndOfMonth(): number {
-		return this.daysInMonth() - this.currentDay()
+		return this.daysInMonth() - this.currentDay() + 1
 	}
 }
