@@ -5,4 +5,8 @@ export class DateUtils implements DateModel {
 	insertDb(date: string): string {
 		return moment(date).format('YYYY-MM-DD HH:mm:ss')
 	}
+
+	daysInMonth(): number {
+		return moment().daysInMonth()
+	}
 }
