@@ -14,10 +14,12 @@ export class SingleChargeDeviceController implements Controller {
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
 			const {
-				subscription,
-				quantity,
-				pricing_scheme: { price },
-				description
+				data: {
+					subscription,
+					quantity,
+					pricing_scheme: { price },
+					description
+				}
 			} = httpRequest.body
 
 			const signature = await this.getSignatureUseCase.get(subscription.id)
