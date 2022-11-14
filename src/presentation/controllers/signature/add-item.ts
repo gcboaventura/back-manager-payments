@@ -50,7 +50,7 @@ export class AddItemSignatureController implements Controller {
 							statement_descriptor: 'PRIMAGE'
 						},
 						payment_method: 'credit_card',
-						amount: price
+						amount: price * quantity
 					}
 				],
 				customer_id: signature.customer.id,
