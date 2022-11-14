@@ -21,20 +21,20 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS CUSTOMERS (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					name VARCHAR(255),
-					email VARCHAR(255),
-					code VARCHAR(255),
-					document VARCHAR(255),
-					document_type VARCHAR(255),
-					type VARCHAR(255),
-					gender VARCHAR(255),
+					id_gateway VARCHAR(100),
+					name VARCHAR(64),
+					email VARCHAR(64),
+					code VARCHAR(52),
+					document VARCHAR(50),
+					document_type VARCHAR(8),
+					type VARCHAR(10),
+					gender VARCHAR(6),
 					delinquent BOOLEAN,
-					id_address VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					birthdate VARCHAR(255),
-					phone VARCHAR(255),
+					id_address VARCHAR(100),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					birthdate VARCHAR(25),
+					phone VARCHAR(14),
 
 					PRIMARY KEY (id)
 			)`
@@ -45,17 +45,17 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS ADDRESS (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_customer VARCHAR(255),
-					line_1 VARCHAR(255),
-					line_2 VARCHAR(255),
-					zip_code VARCHAR(255),
-					city VARCHAR(255),
-					state VARCHAR(255),
-					country VARCHAR(255),
-					status VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_customer VARCHAR(100),
+					line_1 VARCHAR(256),
+					line_2 VARCHAR(128),
+					zip_code VARCHAR(16),
+					city VARCHAR(64),
+					state VARCHAR(5),
+					country VARCHAR(2),
+					status VARCHAR(10),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -66,20 +66,20 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS CARDS (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_customer VARCHAR(255),
-					first_six_digits VARCHAR(255),
-					last_four_digits VARCHAR(255),
-					brand VARCHAR(255),
-					holder_name VARCHAR(255),
-					holder_document VARCHAR(255),
-					exp_month VARCHAR(255),
-					exp_year VARCHAR(255),
-					status VARCHAR(255),
-					label VARCHAR(255),
-					type VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_customer VARCHAR(100),
+					first_six_digits VARCHAR(6),
+					last_four_digits VARCHAR(4),
+					brand VARCHAR(100),
+					holder_name VARCHAR(100),
+					holder_document VARCHAR(100),
+					exp_month VARCHAR(2),
+					exp_year VARCHAR(4),
+					status VARCHAR(10),
+					label VARCHAR(100),
+					type VARCHAR(10),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -90,20 +90,20 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS PLANS (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					name VARCHAR(255),
+					id_gateway VARCHAR(100),
+					name VARCHAR(64),
 					description VARCHAR(255),
-					statement_descriptor VARCHAR(255),
-					minimum_price VARCHAR(255),
-					interval_plan VARCHAR(255),
-					billing_type VARCHAR(255),
+					statement_descriptor VARCHAR(50),
+					minimum_price INT,
+					interval_plan VARCHAR(10),
+					billing_type VARCHAR(15),
 					payment_methods VARCHAR(255),
-					installments VARCHAR(255),
-					status VARCHAR(255),
-					currency VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					deleted_at VARCHAR(255),
+					installments INT,
+					status VARCHAR(10),
+					currency VARCHAR(10),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					deleted_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -114,17 +114,17 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS ITEMS_PLAN (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_plan VARCHAR(255),
-					name VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_plan VARCHAR(100),
+					name VARCHAR(64),
 					description VARCHAR(255),
 					quantity VARCHAR(255),
-					status VARCHAR(255),
-					price VARCHAR(255),
-					scheme_type VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					deleted_at VARCHAR(255),
+					status VARCHAR(10),
+					price INT,
+					scheme_type VARCHAR(15),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					deleted_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -135,23 +135,23 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS SIGNATURES (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_customer VARCHAR(255),
-					id_plan VARCHAR(255),
-					code VARCHAR(255),
-					start_at VARCHAR(255),
-					interval_signature VARCHAR(255),
-					interval_count VARCHAR(255),
-					billing_type VARCHAR(255),
-					next_billing_at VARCHAR(255),
-					payment_method VARCHAR(255),
-					currency VARCHAR(255),
-					statement_descriptor VARCHAR(255),
-					installments VARCHAR(255),
-					status VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					canceled_at VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_customer VARCHAR(100),
+					id_plan VARCHAR(100),
+					code VARCHAR(52),
+					start_at VARCHAR(25),
+					interval_signature VARCHAR(10),
+					interval_count INT,
+					billing_type VARCHAR(15),
+					next_billing_at VARCHAR(25),
+					payment_method VARCHAR(15),
+					currency VARCHAR(10),
+					statement_descriptor VARCHAR(100),
+					installments INT,
+					status VARCHAR(10),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					canceled_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -162,18 +162,18 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS ITEMS_ADDED_TO_SIGNATURE (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_signature VARCHAR(255),
-					id_order VARCHAR(255),
-					name VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_signature VARCHAR(100),
+					id_order VARCHAR(100),
+					name VARCHAR(64),
 					description VARCHAR(255),
 					quantity VARCHAR(255),
-					status VARCHAR(255),
-					price VARCHAR(255),
-					scheme_type VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					deleted_at VARCHAR(255),
+					status VARCHAR(10),
+					price INT,
+					scheme_type VARCHAR(15),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					deleted_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -184,17 +184,17 @@ export class CreateTable implements TableModels {
 		this.connection.query(
 			`CREATE TABLE IF NOT EXISTS ORDERS (
 				  id INT NOT NULL AUTO_INCREMENT,
-					id_gateway VARCHAR(255),
-					id_customer VARCHAR(255),
-					id_charge VARCHAR(255),
+					id_gateway VARCHAR(100),
+					id_customer VARCHAR(100),
+					id_charge VARCHAR(100),
 					closed BOOLEAN,
-					code VARCHAR(255),
-					amount VARCHAR(255),
-					currency VARCHAR(255),
-					status VARCHAR(255),
-					created_at VARCHAR(255),
-					updated_at VARCHAR(255),
-					closed_at VARCHAR(255),
+					code VARCHAR(52),
+					amount INT,
+					currency VARCHAR(10),
+					status VARCHAR(10),
+					created_at VARCHAR(25),
+					updated_at VARCHAR(25),
+					closed_at VARCHAR(25),
 
 					PRIMARY KEY (id)
 			)`
@@ -206,7 +206,7 @@ export class CreateTable implements TableModels {
 			`CREATE TABLE IF NOT EXISTS DEVICES (
 				  id INT NOT NULL AUTO_INCREMENT,
 					name VARCHAR(255),
-					full_price VARCHAR(255),
+					full_price INT,
 
 					PRIMARY KEY (id)
 			)`
