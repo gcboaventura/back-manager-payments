@@ -11,10 +11,7 @@ export class AddOrderController implements Controller {
 
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
-			console.log(httpRequest.body)
-
 			const order = await this.addOrderUseCase.add(httpRequest.body)
-
 			return success(order)
 		} catch (error: unknown) {
 			return serverError(error as Error)
