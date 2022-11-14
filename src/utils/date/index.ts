@@ -3,7 +3,7 @@ import { DateModel } from './types'
 
 export class DateUtils implements DateModel {
 	insertDb(date: string): string {
-		return moment(date).format('YYYY-MM-DD HH:mm:ss')
+		return moment(date).toISOString()
 	}
 
 	daysInMonth(): number {
