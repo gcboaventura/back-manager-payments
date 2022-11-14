@@ -31,8 +31,8 @@ export class CreateTable implements TableModels {
 					gender VARCHAR(255),
 					delinquent BOOLEAN,
 					id_address VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
 					birthdate VARCHAR(255),
 					phone VARCHAR(255),
 
@@ -54,8 +54,8 @@ export class CreateTable implements TableModels {
 					state VARCHAR(255),
 					country VARCHAR(255),
 					status VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -78,8 +78,8 @@ export class CreateTable implements TableModels {
 					status VARCHAR(255),
 					label VARCHAR(255),
 					type VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -101,9 +101,9 @@ export class CreateTable implements TableModels {
 					installments VARCHAR(255),
 					status VARCHAR(255),
 					currency VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
-					deleted_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
+					deleted_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -122,9 +122,9 @@ export class CreateTable implements TableModels {
 					status VARCHAR(255),
 					price VARCHAR(255),
 					scheme_type VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
-					deleted_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
+					deleted_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -139,7 +139,7 @@ export class CreateTable implements TableModels {
 					id_customer VARCHAR(255),
 					id_plan VARCHAR(255),
 					code VARCHAR(255),
-					start_at TIMESTAMP,
+					start_at VARCHAR(255),
 					interval_signature VARCHAR(255),
 					interval_count VARCHAR(255),
 					billing_type VARCHAR(255),
@@ -149,9 +149,9 @@ export class CreateTable implements TableModels {
 					statement_descriptor VARCHAR(255),
 					installments VARCHAR(255),
 					status VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
-					canceled_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
+					canceled_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -171,9 +171,9 @@ export class CreateTable implements TableModels {
 					status VARCHAR(255),
 					price VARCHAR(255),
 					scheme_type VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
-					deleted_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
+					deleted_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
@@ -192,9 +192,9 @@ export class CreateTable implements TableModels {
 					amount VARCHAR(255),
 					currency VARCHAR(255),
 					status VARCHAR(255),
-					created_at TIMESTAMP,
-					updated_at TIMESTAMP,
-					closed_at TIMESTAMP,
+					created_at VARCHAR(255),
+					updated_at VARCHAR(255),
+					closed_at VARCHAR(255),
 
 					PRIMARY KEY (id)
 			)`
