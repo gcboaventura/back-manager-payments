@@ -1,15 +1,7 @@
-import { AddItemSignatureData, AddOrderData, GetSignatureData } from '../../../data'
+import { AddItemSignatureData } from '../../../data'
 import { AddItemSignatureController } from '../../../presentation'
 import { DateUtils } from '../../../utils'
-import {
-	AddItemSignaturePagarme,
-	AddItemsSignatureMysql,
-	AddOrderMysql,
-	AddOrderPagarme,
-	AXIOS,
-	connection,
-	GetSignaturePagarme
-} from '../../../infra'
+import { AddItemSignaturePagarme, AddItemsSignatureMysql, AXIOS, connection } from '../../../infra'
 
 export const addItemSignatureFactory = (): AddItemSignatureController => {
 	const addItemSignatureGateway = new AddItemSignaturePagarme(AXIOS)
@@ -18,20 +10,10 @@ export const addItemSignatureFactory = (): AddItemSignatureController => {
 
 	const addItemsSignatureRepository = new AddItemsSignatureMysql(connection, dateUtils)
 
-	const getSignatureGateway = new GetSignaturePagarme(AXIOS)
-
-	const getSignatureData = new GetSignatureData(getSignatureGateway)
-
-	const addOrderGateway = new AddOrderPagarme(AXIOS)
-
-	const addOrderRepository = new AddOrderMysql(connection, dateUtils)
-
-	const addOrderData = new AddOrderData(addOrderGateway, addOrderRepository)
-
 	const addItemSignatureUseCase = new AddItemSignatureData(
 		addItemSignatureGateway,
 		addItemsSignatureRepository
 	)
 
-	return new AddItemSignatureController(addItemSignatureUseCase, getSignatureData, addOrderData)
+	return new AddItemSignatureController(addItemSignatureUseCase)
 }
