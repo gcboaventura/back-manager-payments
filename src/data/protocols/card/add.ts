@@ -1,4 +1,4 @@
-import { AddCardUseCase, CardModel } from '../../../domain'
+import { AddCardUseCase, CardModel } from '@/domain'
 
 export interface AddCardGateway extends AddCardUseCase {}
 

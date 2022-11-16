@@ -1,4 +1,4 @@
-import { AddAddressUseCase, AddressModel } from '../../../domain'
+import { AddAddressUseCase, AddressModel } from '@/domain'
 
 export interface AddAddressGateway extends AddAddressUseCase {}
 

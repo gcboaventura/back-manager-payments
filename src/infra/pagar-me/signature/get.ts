@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { GetSignatureGateway } from '../../../data'
-import { SignatureModel } from '../../../domain'
+import { GetSignatureGateway } from '@/data'
+import { SignatureModel } from '@/domain'
 
 export class GetSignaturePagarme implements GetSignatureGateway {
 	private readonly axios: Axios

@@ -1,4 +1,4 @@
-import { UpdateItemSignatureUseCase } from '../../../domain'
+import { UpdateItemSignatureUseCase } from '@/domain'
 import { MissingParamError } from '../../errors'
 import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'

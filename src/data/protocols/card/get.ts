@@ -1,3 +1,3 @@
-import { GetCardUseCase } from '../../../domain'
+import { GetCardUseCase } from '@/domain'
 
 export interface GetCardGateway extends GetCardUseCase {}

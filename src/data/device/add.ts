@@ -1,4 +1,4 @@
-import { AddDeviceUseCase, Device, DeviceModel } from '../../domain'
+import { AddDeviceUseCase, Device, DeviceModel } from '@/domain'
 import { AddDeviceRepository } from '../protocols'
 
 export class AddDeviceData implements AddDeviceUseCase {

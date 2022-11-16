@@ -1,4 +1,4 @@
-import { UpdateCustomerUseCase, CustomerUpdateEntity, CustomerUpdateModel } from '../../domain'
+import { UpdateCustomerUseCase, CustomerUpdateEntity, CustomerUpdateModel } from '@/domain'
 import { UpdateCustomerGateway, UpdateCustomerRepository } from '../protocols'
 
 export class UpdateCustomerData implements UpdateCustomerUseCase {

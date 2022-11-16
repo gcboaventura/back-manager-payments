@@ -1,4 +1,4 @@
-import { AddAddressUseCase, Address, AddressModel } from '../../domain'
+import { AddAddressUseCase, Address, AddressModel } from '@/domain'
 import { AddAddressRepository } from '../protocols'
 import { AddAddressGateway } from '../protocols/address'
 

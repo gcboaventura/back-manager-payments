@@ -1,4 +1,4 @@
-import { CancelSignatureUseCase, SignatureModel } from '../../domain'
+import { CancelSignatureUseCase, SignatureModel } from '@/domain'
 import { CancelSignatureGateway, CancelSignatureRepository } from '../protocols'
 
 export class CancelSignatureData implements CancelSignatureUseCase {

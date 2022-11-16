@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { UpdateItemPlanRepository } from '../../../data'
-import { ItemModelPlan, ResponseHandleItemsPlans } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { UpdateItemPlanRepository } from '@/data'
+import { ItemModelPlan, ResponseHandleItemsPlans } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class UpdateItemPlanMysql implements UpdateItemPlanRepository {
 	private readonly connection: Connection

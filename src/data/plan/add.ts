@@ -1,4 +1,4 @@
-import { AddPlanUseCase, ItemModelPlan, Plan, PlanModel } from '../../domain'
+import { AddPlanUseCase, ItemModelPlan, Plan, PlanModel } from '@/domain'
 import { AddItemPlanRepository, AddPlanGateway, AddPlanRepository } from '../protocols'
 
 export class AddPlanData implements AddPlanUseCase {

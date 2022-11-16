@@ -1,5 +1,5 @@
-import { ListSignaturesGateway } from '../../../data'
-import { DeleteCardUseCase } from '../../../domain'
+import { ListSignaturesGateway } from '@/data'
+import { DeleteCardUseCase } from '@/domain'
 import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

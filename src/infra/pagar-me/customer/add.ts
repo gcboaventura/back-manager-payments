@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { AddCustomerGateway } from '../../../data'
-import { Customer, CustomerModel } from '../../../domain'
+import { AddCustomerGateway } from '@/data'
+import { Customer, CustomerModel } from '@/domain'
 
 export class AddCustomerPagarme implements AddCustomerGateway {
 	private readonly axios: Axios

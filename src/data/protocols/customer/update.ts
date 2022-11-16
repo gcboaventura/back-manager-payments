@@ -1,4 +1,4 @@
-import { CustomerUpdateModel, UpdateCustomerUseCase } from '../../../domain'
+import { CustomerUpdateModel, UpdateCustomerUseCase } from '@/domain'
 
 export interface UpdateCustomerGateway extends UpdateCustomerUseCase {}
 

@@ -1,4 +1,4 @@
-import { GetCardUseCase } from '../../../domain'
+import { GetCardUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

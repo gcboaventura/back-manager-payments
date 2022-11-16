@@ -1,13 +1,7 @@
-import { AddAddressData, GetCustomerData } from '../../../data'
-import { AddAddressController } from '../../../presentation'
-import { DateUtils } from '../../../utils'
-import {
-	AddAddressMysql,
-	AddAddressPagarme,
-	AXIOS,
-	connection,
-	GetCustomerPagarme
-} from '../../../infra'
+import { AddAddressData, GetCustomerData } from '@/data'
+import { AddAddressController } from '@/presentation'
+import { DateUtils } from '@/utils'
+import { AddAddressMysql, AddAddressPagarme, AXIOS, connection, GetCustomerPagarme } from '@/infra'
 
 export const addAddressFactory = (): AddAddressController => {
 	const addAddressGateway = new AddAddressPagarme(AXIOS)

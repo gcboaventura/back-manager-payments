@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { CancelSignatureRepository } from '../../../data'
-import { SignatureModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { CancelSignatureRepository } from '@/data'
+import { SignatureModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class CancelSignatureMysql implements CancelSignatureRepository {
 	private readonly connection: Connection

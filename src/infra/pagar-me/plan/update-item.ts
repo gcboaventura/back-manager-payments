@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { UpdateItemPlanGateway } from '../../../data'
-import { ItemModelPlan, ResponseHandleItemsPlans } from '../../../domain'
+import { UpdateItemPlanGateway } from '@/data'
+import { ItemModelPlan, ResponseHandleItemsPlans } from '@/domain'
 
 export class UpdateItemPlanPagarme implements UpdateItemPlanGateway {
 	private readonly axios: Axios

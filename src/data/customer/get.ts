@@ -1,4 +1,4 @@
-import { GetCustomerUseCase, CustomerModel } from '../../domain'
+import { GetCustomerUseCase, CustomerModel } from '@/domain'
 import { GetCustomerGateway } from '../protocols'
 
 export class GetCustomerData implements GetCustomerUseCase {

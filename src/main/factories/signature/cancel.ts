@@ -1,7 +1,7 @@
-import { CancelSignatureData } from '../../../data'
-import { CancelSignatureController } from '../../../presentation'
-import { DateUtils } from '../../../utils'
-import { CancelSignatureMysql, CancelSignaturePagarme, AXIOS, connection } from '../../../infra'
+import { CancelSignatureData } from '@/data'
+import { CancelSignatureController } from '@/presentation'
+import { DateUtils } from '@/utils'
+import { CancelSignatureMysql, CancelSignaturePagarme, AXIOS, connection } from '@/infra'
 
 export const cancelSignatureFactory = (): CancelSignatureController => {
 	const cancelSignatureGateway = new CancelSignaturePagarme(AXIOS)

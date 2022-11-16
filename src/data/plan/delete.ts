@@ -1,4 +1,4 @@
-import { DeletePlanUseCase, ItemModelPlan, PlanModel } from '../../domain'
+import { DeletePlanUseCase, ItemModelPlan, PlanModel } from '@/domain'
 import {
 	DeleteItemPlanRepository,
 	DeletePlanGateway,

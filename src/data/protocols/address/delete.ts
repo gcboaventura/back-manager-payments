@@ -1,4 +1,4 @@
-import { AddressModel, DeleteAddressUseCase } from '../../../domain'
+import { AddressModel, DeleteAddressUseCase } from '@/domain'
 
 export interface DeleteAddressGateway extends DeleteAddressUseCase {}
 

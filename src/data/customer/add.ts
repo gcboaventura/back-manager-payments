@@ -1,4 +1,4 @@
-import { AddCustomerUseCase, Customer, CustomerModel } from '../../domain'
+import { AddCustomerUseCase, Customer, CustomerModel } from '@/domain'
 import { AddAddressRepository, AddCustomerGateway, AddCustomerRepository } from '../protocols'
 
 export class AddCustomerData implements AddCustomerUseCase {

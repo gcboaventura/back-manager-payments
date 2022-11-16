@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
-import { UpdateDeviceRepository } from '../../../data'
-import { Device, DeviceModel } from '../../../domain'
+import { UpdateDeviceRepository } from '@/data'
+import { Device, DeviceModel } from '@/domain'
 
 export class UpdateDeviceMysql implements UpdateDeviceRepository {
 	private readonly connection: Connection

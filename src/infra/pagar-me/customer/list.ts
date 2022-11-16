@@ -1,7 +1,7 @@
 import { Axios } from 'axios'
-import { ListCustomersGateway } from '../../../data'
-import { CustomerModel, GatewayResponse, QueryCustomers } from '../../../domain'
-import { RequestModel } from '../../../utils/request/types'
+import { ListCustomersGateway } from '@/data'
+import { CustomerModel, GatewayResponse, QueryCustomers } from '@/domain'
+import { RequestModel } from '@/utils/request/types'
 
 export class ListCustomersPagarme implements ListCustomersGateway {
 	private readonly axios: Axios

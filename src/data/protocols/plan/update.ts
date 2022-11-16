@@ -1,4 +1,4 @@
-import { PlanModel, UpdatePlanUseCase } from '../../../domain'
+import { PlanModel, UpdatePlanUseCase } from '@/domain'
 
 export interface UpdatePlanGateway extends UpdatePlanUseCase {}
 

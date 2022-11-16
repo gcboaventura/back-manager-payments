@@ -1,4 +1,4 @@
-import { AddCustomerUseCase, AddressModel, CustomerModel } from '../../../domain'
+import { AddCustomerUseCase, AddressModel, CustomerModel } from '@/domain'
 
 export interface AddCustomerGateway extends AddCustomerUseCase {}
 

@@ -1,4 +1,4 @@
-import { AddItemPlanUseCase, Items, ResponseHandleItemsPlans } from '../../domain'
+import { AddItemPlanUseCase, Items, ResponseHandleItemsPlans } from '@/domain'
 import { AddItemPlanGateway, AddItemPlanRepository } from '../protocols'
 
 export class AddItemPlanData implements AddItemPlanUseCase {

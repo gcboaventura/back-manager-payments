@@ -1,4 +1,4 @@
-import { UpdatePlanUseCase, Plan, PlanModel } from '../../domain'
+import { UpdatePlanUseCase, Plan, PlanModel } from '@/domain'
 import { UpdatePlanGateway, UpdatePlanRepository } from '../protocols'
 
 export class UpdatePlanData implements UpdatePlanUseCase {

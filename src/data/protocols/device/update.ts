@@ -1,3 +1,3 @@
-import { UpdateDeviceUseCase } from '../../../domain'
+import { UpdateDeviceUseCase } from '@/domain'
 
 export interface UpdateDeviceRepository extends UpdateDeviceUseCase {}

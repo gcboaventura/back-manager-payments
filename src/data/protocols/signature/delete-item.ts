@@ -1,8 +1,4 @@
-import {
-	DeleteItemSignatureUseCase,
-	ItemsModel,
-	ResponseHandleItemSignature
-} from '../../../domain'
+import { DeleteItemSignatureUseCase, ItemsModel, ResponseHandleItemSignature } from '@/domain'
 
 export interface DeleteItemSignatureGateway extends DeleteItemSignatureUseCase {}
 

@@ -1,7 +1,7 @@
-import { DeleteItemPlanData } from '../../../data'
-import { DeleteItemPlanController } from '../../../presentation'
-import { DeleteItemPlanMysql, DeleteItemPlanPagarme, AXIOS, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { DeleteItemPlanData } from '@/data'
+import { DeleteItemPlanController } from '@/presentation'
+import { DeleteItemPlanMysql, DeleteItemPlanPagarme, AXIOS, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const deleteItemPlanFactory = (): DeleteItemPlanController => {
 	const deleteItemPlanGateway = new DeleteItemPlanPagarme(AXIOS)

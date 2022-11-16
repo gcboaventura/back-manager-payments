@@ -1,7 +1,7 @@
-import { UpdatePlanData } from '../../../data'
-import { UpdatePlanController } from '../../../presentation'
-import { UpdatePlanMysql, UpdatePlanPagarme, AXIOS, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { UpdatePlanData } from '@/data'
+import { UpdatePlanController } from '@/presentation'
+import { UpdatePlanMysql, UpdatePlanPagarme, AXIOS, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const updatePlanFactory = (): UpdatePlanController => {
 	const updatePlanGateway = new UpdatePlanPagarme(AXIOS)

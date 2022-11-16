@@ -1,6 +1,6 @@
-import { UpdateAddressData } from '../../../data'
-import { UpdateAddressController } from '../../../presentation'
-import { UpdateAddressMysql, UpdateAddressPagarme, AXIOS, connection } from '../../../infra'
+import { UpdateAddressData } from '@/data'
+import { UpdateAddressController } from '@/presentation'
+import { UpdateAddressMysql, UpdateAddressPagarme, AXIOS, connection } from '@/infra'
 
 export const updateAddressFactory = (): UpdateAddressController => {
 	const updateAddressGateway = new UpdateAddressPagarme(AXIOS)

@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { AddSignatureRepository } from '../../../data'
-import { SignatureModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { AddSignatureRepository } from '@/data'
+import { SignatureModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class AddSignatureMysql implements AddSignatureRepository {
 	private readonly connection: Connection

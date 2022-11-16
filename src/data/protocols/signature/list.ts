@@ -1,3 +1,3 @@
-import { ListSignaturesUseCase } from '../../../domain'
+import { ListSignaturesUseCase } from '@/domain'
 
 export interface ListSignaturesGateway extends ListSignaturesUseCase {}

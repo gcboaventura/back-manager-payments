@@ -1,6 +1,6 @@
-import { GetCustomerData } from '../../../data'
-import { GetCustomerController } from '../../../presentation'
-import { GetCustomerPagarme, AXIOS } from '../../../infra'
+import { GetCustomerData } from '@/data'
+import { GetCustomerController } from '@/presentation'
+import { GetCustomerPagarme, AXIOS } from '@/infra'
 
 export const getCustomerFactory = (): GetCustomerController => {
 	const getCustomerGateway = new GetCustomerPagarme(AXIOS)

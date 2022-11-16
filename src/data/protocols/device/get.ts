@@ -1,3 +1,3 @@
-import { GetDeviceUseCase } from '../../../domain'
+import { GetDeviceUseCase } from '@/domain'
 
 export interface GetDeviceRepository extends GetDeviceUseCase {}

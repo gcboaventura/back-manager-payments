@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
-import { DeleteCardRepository } from '../../../data'
-import { CardModel } from '../../../domain'
+import { DeleteCardRepository } from '@/data'
+import { CardModel } from '@/domain'
 
 export class DeleteCardMysql implements DeleteCardRepository {
 	private readonly connection: Connection

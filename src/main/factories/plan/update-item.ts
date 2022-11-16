@@ -1,7 +1,7 @@
-import { UpdateItemPlanData } from '../../../data'
-import { UpdateItemPlanController } from '../../../presentation'
-import { UpdateItemPlanMysql, UpdateItemPlanPagarme, AXIOS, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { UpdateItemPlanData } from '@/data'
+import { UpdateItemPlanController } from '@/presentation'
+import { UpdateItemPlanMysql, UpdateItemPlanPagarme, AXIOS, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const updateItemPlanFactory = (): UpdateItemPlanController => {
 	const updateItemPlanGateway = new UpdateItemPlanPagarme(AXIOS)

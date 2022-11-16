@@ -1,7 +1,7 @@
-import { ListAddressData } from '../../../data'
-import { ListAddressController } from '../../../presentation'
-import { ListAddressPagarme, AXIOS } from '../../../infra'
-import { RequestUtils } from '../../../utils'
+import { ListAddressData } from '@/data'
+import { ListAddressController } from '@/presentation'
+import { ListAddressPagarme, AXIOS } from '@/infra'
+import { RequestUtils } from '@/utils'
 
 export const listAddressFactory = (): ListAddressController => {
 	const requestUtils = new RequestUtils()

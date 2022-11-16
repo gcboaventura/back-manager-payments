@@ -1,5 +1,5 @@
 import axios, { Axios } from 'axios'
-import { env } from '../../../main/config'
+import { env } from '@/main/config'
 import { IncomingHttpHeaders } from 'http'
 
 const headers: IncomingHttpHeaders = {

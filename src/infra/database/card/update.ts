@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { UpdateCardRepository } from '../../../data'
-import { CardModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { UpdateCardRepository } from '@/data'
+import { CardModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class UpdateCardMysql implements UpdateCardRepository {
 	private readonly connection: Connection

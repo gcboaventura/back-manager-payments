@@ -1,4 +1,4 @@
-import { GetDeviceUseCase } from '../../../domain'
+import { GetDeviceUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

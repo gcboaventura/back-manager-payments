@@ -1,5 +1,5 @@
 import mysql from 'mysql'
-import { env } from '../../../main/config'
+import { env } from '@/main/config'
 
 export const connection = mysql.createConnection({
 	host: env.DB_HOST,

@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { DeletePlanGateway } from '../../../data'
-import { PlanModel } from '../../../domain'
+import { DeletePlanGateway } from '@/data'
+import { PlanModel } from '@/domain'
 
 export class DeletePlanPagarme implements DeletePlanGateway {
 	private readonly axios: Axios

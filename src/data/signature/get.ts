@@ -1,4 +1,4 @@
-import { GetSignatureUseCase, SignatureModel } from '../../domain'
+import { GetSignatureUseCase, SignatureModel } from '@/domain'
 import { GetSignatureGateway } from '../protocols'
 
 export class GetSignatureData implements GetSignatureUseCase {

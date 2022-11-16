@@ -1,6 +1,6 @@
-import { ListItemsSignatureData } from '../../../data'
-import { ListItemsSignatureController } from '../../../presentation'
-import { ListItemsSignaturePagarme, AXIOS } from '../../../infra'
+import { ListItemsSignatureData } from '@/data'
+import { ListItemsSignatureController } from '@/presentation'
+import { ListItemsSignaturePagarme, AXIOS } from '@/infra'
 
 export const listItemsSignatureFactory = (): ListItemsSignatureController => {
 	const listItemsSignatureGateway = new ListItemsSignaturePagarme(AXIOS)

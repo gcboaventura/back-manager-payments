@@ -1,4 +1,4 @@
-import { ListCardsUseCase, CardModel, GatewayResponse } from '../../domain'
+import { ListCardsUseCase, CardModel, GatewayResponse } from '@/domain'
 import { ListCardsGateway } from '../protocols'
 
 export class ListCardsData implements ListCardsUseCase {

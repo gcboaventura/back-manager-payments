@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { UpdateItemSignatureGateway } from '../../../data'
-import { ResponseHandleItemSignature, UpdateItemSignature } from '../../../domain'
+import { UpdateItemSignatureGateway } from '@/data'
+import { ResponseHandleItemSignature, UpdateItemSignature } from '@/domain'
 
 export class UpdateItemSignaturePagarme implements UpdateItemSignatureGateway {
 	private readonly axios: Axios

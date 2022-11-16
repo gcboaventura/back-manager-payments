@@ -1,4 +1,4 @@
-import { DeleteCardUseCase, CardModel } from '../../domain'
+import { DeleteCardUseCase, CardModel } from '@/domain'
 import { DeleteCardGateway, DeleteCardRepository } from '../protocols'
 
 export class DeleteCardData implements DeleteCardUseCase {

@@ -1,5 +1,5 @@
 import { DeleteItemSignatureGateway, DeleteItemSignatureRepository } from '../protocols'
-import { DeleteItemSignatureUseCase, ResponseHandleItemSignature } from '../../domain'
+import { DeleteItemSignatureUseCase, ResponseHandleItemSignature } from '@/domain'
 
 export class DeleteItemSignatureData implements DeleteItemSignatureUseCase {
 	private readonly deleteItemSignatureGateway: DeleteItemSignatureGateway

@@ -1,4 +1,4 @@
-import { GetPlanUseCase, Plan, PlanModel } from '../../domain'
+import { GetPlanUseCase, Plan, PlanModel } from '@/domain'
 import { GetPlanGateway } from '../protocols'
 
 export class GetPlanData implements GetPlanUseCase {

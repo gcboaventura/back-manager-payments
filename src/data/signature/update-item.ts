@@ -3,7 +3,7 @@ import {
 	UpdateItemSignatureUseCase,
 	ResponseHandleItemSignature,
 	UpdateItemSignature
-} from '../../domain'
+} from '@/domain'
 
 export class UpdateItemSignatureData implements UpdateItemSignatureUseCase {
 	private readonly updateItemSignatureGateway: UpdateItemSignatureGateway

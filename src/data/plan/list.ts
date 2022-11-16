@@ -1,4 +1,4 @@
-import { GatewayResponse, ListPlansUseCase, PlanModel, QueryPlan } from '../../domain'
+import { GatewayResponse, ListPlansUseCase, PlanModel, QueryPlan } from '@/domain'
 import { ListPlansGateway } from '../protocols'
 
 export class ListPlansData implements ListPlansUseCase {

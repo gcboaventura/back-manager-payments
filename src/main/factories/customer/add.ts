@@ -1,6 +1,6 @@
-import { AddCustomerData, LoadCustomerByEmailData } from '../../../data'
-import { AddCustomerController } from '../../../presentation'
-import { DateUtils } from '../../../utils'
+import { AddCustomerData, LoadCustomerByEmailData } from '@/data'
+import { AddCustomerController } from '@/presentation'
+import { DateUtils } from '@/utils'
 import {
 	AddCustomerMysql,
 	AddCustomerPagarme,
@@ -8,7 +8,7 @@ import {
 	connection,
 	LoadCustomerByEmailPagarme,
 	AddAddressMysql
-} from '../../../infra'
+} from '@/infra'
 
 export const addCustomerFactory = (): AddCustomerController => {
 	const loadCustomerByEmailGateway = new LoadCustomerByEmailPagarme(AXIOS)

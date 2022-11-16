@@ -1,4 +1,4 @@
-import { DeletePlanUseCase, PlanModel } from '../../../domain'
+import { DeletePlanUseCase, PlanModel } from '@/domain'
 
 export interface DeletePlanGateway extends DeletePlanUseCase {}
 

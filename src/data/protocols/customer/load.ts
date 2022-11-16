@@ -1,3 +1,3 @@
-import { LoadCustomerByEmailUseCase } from '../../../domain'
+import { LoadCustomerByEmailUseCase } from '@/domain'
 
 export interface LoadCustomerByEmailGateway extends LoadCustomerByEmailUseCase {}

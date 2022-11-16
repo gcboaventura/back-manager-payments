@@ -1,13 +1,7 @@
-import { AddOrderData, GetSignatureData } from '../../../data'
-import { SingleChargeDeviceController } from '../../../presentation'
-import { DateUtils } from '../../../utils'
-import {
-	AddOrderMysql,
-	AddOrderPagarme,
-	AXIOS,
-	connection,
-	GetSignaturePagarme
-} from '../../../infra'
+import { AddOrderData, GetSignatureData } from '@/data'
+import { SingleChargeDeviceController } from '@/presentation'
+import { DateUtils } from '@/utils'
+import { AddOrderMysql, AddOrderPagarme, AXIOS, connection, GetSignaturePagarme } from '@/infra'
 
 export const sigleChargeDeviceFactory = (): SingleChargeDeviceController => {
 	const dateUtils = new DateUtils()

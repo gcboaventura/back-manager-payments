@@ -1,4 +1,4 @@
-import { UpdateCardUseCase, Card, CardModel } from '../../domain'
+import { UpdateCardUseCase, Card, CardModel } from '@/domain'
 import { UpdateCardGateway, UpdateCardRepository } from '../protocols'
 
 export class UpdateCardData implements UpdateCardUseCase {

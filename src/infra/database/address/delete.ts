@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
-import { DeleteAddressRepository } from '../../../data/protocols/address'
-import { AddressModel } from '../../../domain'
+import { DeleteAddressRepository } from '@/data/protocols/address'
+import { AddressModel } from '@/domain'
 
 export class DeleteAddressMysql implements DeleteAddressRepository {
 	private readonly connection: Connection

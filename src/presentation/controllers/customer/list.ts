@@ -1,4 +1,4 @@
-import { ListCustomersUseCase } from '../../../domain'
+import { ListCustomersUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

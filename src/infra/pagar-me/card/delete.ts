@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { DeleteCardGateway } from '../../../data'
-import { CardModel } from '../../../domain'
+import { DeleteCardGateway } from '@/data'
+import { CardModel } from '@/domain'
 
 export class DeleteCardPagarme implements DeleteCardGateway {
 	private readonly axios: Axios

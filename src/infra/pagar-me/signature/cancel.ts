@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { CancelSignatureGateway } from '../../../data'
-import { SignatureModel } from '../../../domain'
+import { CancelSignatureGateway } from '@/data'
+import { SignatureModel } from '@/domain'
 
 export class CancelSignaturePagarme implements CancelSignatureGateway {
 	private readonly axios: Axios

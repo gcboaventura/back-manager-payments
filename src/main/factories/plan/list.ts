@@ -1,7 +1,7 @@
-import { ListPlansData } from '../../../data'
-import { ListPlansController } from '../../../presentation'
-import { ListPlansPagarme, AXIOS } from '../../../infra'
-import { RequestUtils } from '../../../utils'
+import { ListPlansData } from '@/data'
+import { ListPlansController } from '@/presentation'
+import { ListPlansPagarme, AXIOS } from '@/infra'
+import { RequestUtils } from '@/utils'
 
 export const listPlansFactory = (): ListPlansController => {
 	const requestUtils = new RequestUtils()

@@ -1,4 +1,4 @@
-import { ListCustomersUseCase, CustomerModel, QueryCustomers, GatewayResponse } from '../../domain'
+import { ListCustomersUseCase, CustomerModel, QueryCustomers, GatewayResponse } from '@/domain'
 import { ListCustomersGateway } from '../protocols'
 
 export class ListCustomersData implements ListCustomersUseCase {

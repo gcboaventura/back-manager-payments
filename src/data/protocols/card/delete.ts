@@ -1,4 +1,4 @@
-import { DeleteCardUseCase } from '../../../domain'
+import { DeleteCardUseCase } from '@/domain'
 
 export interface DeleteCardGateway extends DeleteCardUseCase {}
 

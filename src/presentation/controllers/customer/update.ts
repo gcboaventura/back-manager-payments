@@ -1,4 +1,4 @@
-import { UpdateCustomerUseCase } from '../../../domain'
+import { UpdateCustomerUseCase } from '@/domain'
 import { MissingParamError } from '../../errors'
 import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'

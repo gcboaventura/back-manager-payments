@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { AddItemPlanGateway } from '../../../data'
-import { Items, ResponseHandleItemsPlans } from '../../../domain'
+import { AddItemPlanGateway } from '@/data'
+import { Items, ResponseHandleItemsPlans } from '@/domain'
 
 export class AddItemPlanPagarme implements AddItemPlanGateway {
 	private readonly axios: Axios

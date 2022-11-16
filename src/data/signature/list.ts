@@ -1,10 +1,5 @@
 import { ListSignaturesGateway } from '../protocols'
-import {
-	GatewayResponse,
-	ListSignaturesUseCase,
-	QuerySignatures,
-	SignatureModel
-} from '../../domain'
+import { GatewayResponse, ListSignaturesUseCase, QuerySignatures, SignatureModel } from '@/domain'
 
 export class ListSignaturesData implements ListSignaturesUseCase {
 	private readonly listSignaturesGateway: ListSignaturesGateway

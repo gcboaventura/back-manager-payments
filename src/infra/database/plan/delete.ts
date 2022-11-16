@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { DeletePlanRepository } from '../../../data'
-import { PlanModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { DeletePlanRepository } from '@/data'
+import { PlanModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class DeletePlanMysql implements DeletePlanRepository {
 	private readonly connection: Connection

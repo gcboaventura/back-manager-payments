@@ -1,13 +1,13 @@
-import { DeleteCardData } from '../../../data'
-import { DeleteCardController } from '../../../presentation'
-import { RequestUtils } from '../../../utils'
+import { DeleteCardData } from '@/data'
+import { DeleteCardController } from '@/presentation'
+import { RequestUtils } from '@/utils'
 import {
 	DeleteCardPagarme,
 	AXIOS,
 	DeleteCardMysql,
 	connection,
 	ListSignaturesPagarme
-} from '../../../infra'
+} from '@/infra'
 
 export const deleteCardFactory = (): DeleteCardController => {
 	const deleteCardGateway = new DeleteCardPagarme(AXIOS)

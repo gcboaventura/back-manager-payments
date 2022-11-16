@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { AddCustomerRepository } from '../../../data'
-import { CustomerModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { AddCustomerRepository } from '@/data'
+import { CustomerModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class AddCustomerMysql implements AddCustomerRepository {
 	private readonly connection: Connection

@@ -4,7 +4,7 @@ import {
 	ItemsModel,
 	ListItemsSignatureUseCase,
 	QueryItemSignature
-} from '../../domain'
+} from '@/domain'
 
 export class ListItemsSignatureData implements ListItemsSignatureUseCase {
 	private readonly listItemsSignatureGateway: ListItemsSignatureGateway

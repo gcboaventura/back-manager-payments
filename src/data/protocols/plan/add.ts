@@ -1,4 +1,4 @@
-import { AddPlanUseCase, PlanModel } from '../../../domain'
+import { AddPlanUseCase, PlanModel } from '@/domain'
 
 export interface AddPlanGateway extends AddPlanUseCase {}
 

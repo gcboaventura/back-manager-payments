@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { GetAddressGateway } from '../../../data/protocols/address'
-import { AddressModel } from '../../../domain'
+import { GetAddressGateway } from '@/data/protocols/address'
+import { AddressModel } from '@/domain'
 
 export class GetAddressPagarme implements GetAddressGateway {
 	private readonly axios: Axios

@@ -1,3 +1,3 @@
-import { DeleteDeviceUseCase } from '../../../domain'
+import { DeleteDeviceUseCase } from '@/domain'
 
 export interface DeleteDeviceRepository extends DeleteDeviceUseCase {}

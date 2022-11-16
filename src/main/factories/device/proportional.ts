@@ -1,7 +1,7 @@
-import { GetDeviceData } from '../../../data'
-import { GetDeviceProportionalValueController } from '../../../presentation'
-import { GetDeviceMysql, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { GetDeviceData } from '@/data'
+import { GetDeviceProportionalValueController } from '@/presentation'
+import { GetDeviceMysql, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const getDeviceProportionalValueFactory = (): GetDeviceProportionalValueController => {
 	const getDeviceRepository = new GetDeviceMysql(connection)

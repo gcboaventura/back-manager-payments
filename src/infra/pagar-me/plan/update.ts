@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { UpdatePlanGateway } from '../../../data'
-import { Plan, PlanModel } from '../../../domain'
+import { UpdatePlanGateway } from '@/data'
+import { Plan, PlanModel } from '@/domain'
 
 export class UpdatePlanPagarme implements UpdatePlanGateway {
 	private readonly axios: Axios

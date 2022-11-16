@@ -1,4 +1,4 @@
-import { DeleteItemPlanUseCase, ResponseHandleItemsPlans } from '../../domain'
+import { DeleteItemPlanUseCase, ResponseHandleItemsPlans } from '@/domain'
 import { DeleteItemPlanGateway, DeleteItemPlanRepository } from '../protocols'
 
 export class DeleteItemPlanData implements DeleteItemPlanUseCase {

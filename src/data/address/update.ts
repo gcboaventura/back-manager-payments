@@ -1,4 +1,4 @@
-import { UpdateAddressUseCase, AddressModel, AddressUpdate } from '../../domain'
+import { UpdateAddressUseCase, AddressModel, AddressUpdate } from '@/domain'
 import { UpdateAddressGateway, UpdateAddressRepository } from '../protocols/address'
 
 export class UpdateAddressData implements UpdateAddressUseCase {

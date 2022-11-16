@@ -1,4 +1,4 @@
-import { CancelSignatureUseCase, SignatureModel } from '../../../domain'
+import { CancelSignatureUseCase, SignatureModel } from '@/domain'
 
 export interface CancelSignatureGateway extends CancelSignatureUseCase {}
 

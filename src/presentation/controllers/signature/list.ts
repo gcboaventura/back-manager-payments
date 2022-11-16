@@ -1,4 +1,4 @@
-import { ListSignaturesUseCase } from '../../../domain'
+import { ListSignaturesUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

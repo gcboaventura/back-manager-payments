@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { UpdateCardGateway } from '../../../data'
-import { Card, CardModel } from '../../../domain'
+import { UpdateCardGateway } from '@/data'
+import { Card, CardModel } from '@/domain'
 
 export class UpdateCardPagarme implements UpdateCardGateway {
 	private readonly axios: Axios

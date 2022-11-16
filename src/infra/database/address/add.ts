@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { AddAddressRepository } from '../../../data'
-import { AddressModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { AddAddressRepository } from '@/data'
+import { AddressModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class AddAddressMysql implements AddAddressRepository {
 	private readonly connection: Connection

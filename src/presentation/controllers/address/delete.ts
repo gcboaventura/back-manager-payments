@@ -1,4 +1,4 @@
-import { DeleteAddressUseCase } from '../../../domain'
+import { DeleteAddressUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

@@ -1,4 +1,4 @@
-import { StatusCode } from '../../domain'
+import { StatusCode } from '@/domain'
 import { ServerError, UnauthorizedError } from '../errors'
 import { HttpResponse } from '../protocols'
 

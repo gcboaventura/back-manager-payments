@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { UpdateItemSignatureRepository } from '../../../data'
-import { ItemsModel, ResponseHandleItemSignature } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { UpdateItemSignatureRepository } from '@/data'
+import { ItemsModel, ResponseHandleItemSignature } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class UpdateItemSignatureMysql implements UpdateItemSignatureRepository {
 	private readonly connection: Connection

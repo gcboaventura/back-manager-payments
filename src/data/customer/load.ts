@@ -1,4 +1,4 @@
-import { LoadCustomerByEmailUseCase, CustomerModel, GatewayResponse } from '../../domain'
+import { LoadCustomerByEmailUseCase, CustomerModel, GatewayResponse } from '@/domain'
 import { LoadCustomerByEmailGateway } from '../protocols'
 
 export class LoadCustomerByEmailData implements LoadCustomerByEmailUseCase {

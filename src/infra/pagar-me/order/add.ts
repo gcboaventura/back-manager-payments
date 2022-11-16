@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { AddOrderGateway } from '../../../data'
-import { Order, OrderModel } from '../../../domain'
+import { AddOrderGateway } from '@/data'
+import { Order, OrderModel } from '@/domain'
 
 export class AddOrderPagarme implements AddOrderGateway {
 	private readonly axios: Axios

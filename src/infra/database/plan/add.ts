@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { AddPlanRepository } from '../../../data'
-import { PlanModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { AddPlanRepository } from '@/data'
+import { PlanModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class AddPlanMysql implements AddPlanRepository {
 	private readonly connection: Connection

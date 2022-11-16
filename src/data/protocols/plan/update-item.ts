@@ -1,4 +1,4 @@
-import { ItemModelPlan, ResponseHandleItemsPlans, UpdateItemPlanUseCase } from '../../../domain'
+import { ItemModelPlan, ResponseHandleItemsPlans, UpdateItemPlanUseCase } from '@/domain'
 
 export interface UpdateItemPlanGateway extends UpdateItemPlanUseCase {}
 

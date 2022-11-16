@@ -1,4 +1,4 @@
-import { GetPlanUseCase } from '../../../domain'
+import { GetPlanUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

@@ -1,5 +1,5 @@
 import { Response, Router, Request } from 'express'
-import { StatusCode } from '../../domain'
+import { StatusCode } from '@/domain'
 import { env } from '../config'
 
 export default (router: Router): void => {

@@ -1,7 +1,7 @@
 import { Axios } from 'axios'
-import { ListSignaturesGateway } from '../../../data'
-import { GatewayResponse, QuerySignatures, SignatureModel } from '../../../domain'
-import { RequestModel } from '../../../utils/request/types'
+import { ListSignaturesGateway } from '@/data'
+import { GatewayResponse, QuerySignatures, SignatureModel } from '@/domain'
+import { RequestModel } from '@/utils/request/types'
 
 export class ListSignaturesPagarme implements ListSignaturesGateway {
 	private readonly axios: Axios

@@ -1,4 +1,4 @@
-import { DeleteItemPlanUseCase, ResponseHandleItemsPlans } from '../../../domain'
+import { DeleteItemPlanUseCase, ResponseHandleItemsPlans } from '@/domain'
 
 export interface DeleteItemPlanGateway extends DeleteItemPlanUseCase {}
 

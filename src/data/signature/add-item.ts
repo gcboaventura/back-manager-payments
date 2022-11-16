@@ -1,4 +1,4 @@
-import { AddItemSignatureUseCase, ItemSignature, ResponseHandleItemSignature } from '../../domain'
+import { AddItemSignatureUseCase, ItemSignature, ResponseHandleItemSignature } from '@/domain'
 import { AddItemSignatureGateway, AddItemSignatureRepository } from '../protocols'
 
 export class AddItemSignatureData implements AddItemSignatureUseCase {

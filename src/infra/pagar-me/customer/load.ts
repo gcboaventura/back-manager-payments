@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { LoadCustomerByEmailGateway } from '../../../data'
-import { CustomerModel, GatewayResponse } from '../../../domain'
+import { LoadCustomerByEmailGateway } from '@/data'
+import { CustomerModel, GatewayResponse } from '@/domain'
 
 export class LoadCustomerByEmailPagarme implements LoadCustomerByEmailGateway {
 	private readonly axios: Axios

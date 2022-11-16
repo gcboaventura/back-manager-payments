@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { ListItemsSignatureGateway } from '../../../data'
-import { GatewayResponse, ItemsModel, QueryItemSignature } from '../../../domain'
+import { ListItemsSignatureGateway } from '@/data'
+import { GatewayResponse, ItemsModel, QueryItemSignature } from '@/domain'
 
 export class ListItemsSignaturePagarme implements ListItemsSignatureGateway {
 	private readonly axios: Axios

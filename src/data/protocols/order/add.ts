@@ -1,4 +1,4 @@
-import { AddOrderUseCase, OrderModel } from '../../../domain'
+import { AddOrderUseCase, OrderModel } from '@/domain'
 
 export interface AddOrderGateway extends AddOrderUseCase {}
 

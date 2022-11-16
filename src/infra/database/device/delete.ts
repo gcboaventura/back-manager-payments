@@ -1,6 +1,6 @@
 import { Connection } from 'mysql'
-import { DeleteDeviceRepository } from '../../../data'
-import { DeviceModel } from '../../../domain'
+import { DeleteDeviceRepository } from '@/data'
+import { DeviceModel } from '@/domain'
 
 export class DeleteDeviceMysql implements DeleteDeviceRepository {
 	private readonly connection: Connection

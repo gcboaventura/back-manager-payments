@@ -1,6 +1,6 @@
-import { AddDeviceData } from '../../../data'
-import { AddDeviceController } from '../../../presentation'
-import { AddDeviceMysql, connection } from '../../../infra'
+import { AddDeviceData } from '@/data'
+import { AddDeviceController } from '@/presentation'
+import { AddDeviceMysql, connection } from '@/infra'
 
 export const addDeviceFactory = (): AddDeviceController => {
 	const addDeviceRepository = new AddDeviceMysql(connection)

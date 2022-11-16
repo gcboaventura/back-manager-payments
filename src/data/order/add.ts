@@ -1,4 +1,4 @@
-import { AddOrderUseCase, Order, OrderModel } from '../../domain'
+import { AddOrderUseCase, Order, OrderModel } from '@/domain'
 import { AddOrderGateway, AddOrderRepository } from '../protocols'
 
 export class AddOrderData implements AddOrderUseCase {

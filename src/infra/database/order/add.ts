@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { AddOrderRepository } from '../../../data'
-import { OrderModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { AddOrderRepository } from '@/data'
+import { OrderModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class AddOrderMysql implements AddOrderRepository {
 	private readonly connection: Connection

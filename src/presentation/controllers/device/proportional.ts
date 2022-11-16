@@ -1,5 +1,5 @@
-import { DeviceModel, GetDeviceProportionalValueUseCase } from '../../../domain'
-import { DateUtils } from '../../../utils'
+import { DeviceModel, GetDeviceProportionalValueUseCase } from '@/domain'
+import { DateUtils } from '@/utils'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

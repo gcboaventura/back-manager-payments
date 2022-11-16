@@ -1,7 +1,7 @@
-import { UpdateCardData } from '../../../data'
-import { UpdateCardController } from '../../../presentation'
-import { DateUtils } from '../../../utils'
-import { UpdateCardMysql, UpdateCardPagarme, AXIOS, connection } from '../../../infra'
+import { UpdateCardData } from '@/data'
+import { UpdateCardController } from '@/presentation'
+import { DateUtils } from '@/utils'
+import { UpdateCardMysql, UpdateCardPagarme, AXIOS, connection } from '@/infra'
 
 export const updateCardFactory = (): UpdateCardController => {
 	const updateCardGateway = new UpdateCardPagarme(AXIOS)

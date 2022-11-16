@@ -1,7 +1,7 @@
-import { UpdateCustomerController } from '../../../presentation'
-import { AXIOS, connection, UpdateCustomerPagarme, UpdateCustomerMysql } from '../../../infra'
-import { UpdateCustomerData } from '../../../data'
-import { DateUtils } from '../../../utils'
+import { UpdateCustomerController } from '@/presentation'
+import { AXIOS, connection, UpdateCustomerPagarme, UpdateCustomerMysql } from '@/infra'
+import { UpdateCustomerData } from '@/data'
+import { DateUtils } from '@/utils'
 
 export const updateCustomerFactory = (): UpdateCustomerController => {
 	const UpdateCustomerGateway = new UpdateCustomerPagarme(AXIOS)

@@ -1,6 +1,6 @@
-import { DeleteDeviceData } from '../../../data'
-import { DeleteDeviceController } from '../../../presentation'
-import { DeleteDeviceMysql, connection } from '../../../infra'
+import { DeleteDeviceData } from '@/data'
+import { DeleteDeviceController } from '@/presentation'
+import { DeleteDeviceMysql, connection } from '@/infra'
 
 export const deleteDeviceFactory = (): DeleteDeviceController => {
 	const deleteDeviceRepository = new DeleteDeviceMysql(connection)

@@ -1,6 +1,6 @@
 import { Axios } from 'axios'
-import { DeleteItemPlanGateway } from '../../../data'
-import { ResponseHandleItemsPlans } from '../../../domain'
+import { DeleteItemPlanGateway } from '@/data'
+import { ResponseHandleItemsPlans } from '@/domain'
 
 export class DeleteItemPlanPagarme implements DeleteItemPlanGateway {
 	private readonly axios: Axios

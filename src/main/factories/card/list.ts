@@ -1,6 +1,6 @@
-import { ListCardsData } from '../../../data'
-import { ListCardsController } from '../../../presentation'
-import { ListCardsPagarme, AXIOS } from '../../../infra'
+import { ListCardsData } from '@/data'
+import { ListCardsController } from '@/presentation'
+import { ListCardsPagarme, AXIOS } from '@/infra'
 
 export const listCardsFactory = (): ListCardsController => {
 	const listCardsGateway = new ListCardsPagarme(AXIOS)

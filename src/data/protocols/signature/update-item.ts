@@ -1,8 +1,4 @@
-import {
-	ItemsModel,
-	ResponseHandleItemSignature,
-	UpdateItemSignatureUseCase
-} from '../../../domain'
+import { ItemsModel, ResponseHandleItemSignature, UpdateItemSignatureUseCase } from '@/domain'
 
 export interface UpdateItemSignatureGateway extends UpdateItemSignatureUseCase {}
 

@@ -1,7 +1,7 @@
-import { AddOrderData } from '../../../data'
-import { AddOrderController } from '../../../presentation'
-import { AddOrderMysql, AddOrderPagarme, AXIOS, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { AddOrderData } from '@/data'
+import { AddOrderController } from '@/presentation'
+import { AddOrderMysql, AddOrderPagarme, AXIOS, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const addOrderFactory = (): AddOrderController => {
 	const addOrderGateway = new AddOrderPagarme(AXIOS)

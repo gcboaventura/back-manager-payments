@@ -1,4 +1,4 @@
-import { AddOrderUseCase, GetSignatureUseCase } from '../../../domain'
+import { AddOrderUseCase, GetSignatureUseCase } from '@/domain'
 import { serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 

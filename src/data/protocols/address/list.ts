@@ -1,3 +1,3 @@
-import { ListAddressUseCase } from '../../../domain'
+import { ListAddressUseCase } from '@/domain'
 
 export interface ListAddressGateway extends ListAddressUseCase {}

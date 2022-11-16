@@ -1,7 +1,7 @@
 import { Connection } from 'mysql'
-import { UpdateCustomerRepository } from '../../../data'
-import { CustomerUpdateModel } from '../../../domain'
-import { DateModel } from '../../../utils/date/types'
+import { UpdateCustomerRepository } from '@/data'
+import { CustomerUpdateModel } from '@/domain'
+import { DateModel } from '@/utils/date/types'
 
 export class UpdateCustomerMysql implements UpdateCustomerRepository {
 	private readonly connection: Connection

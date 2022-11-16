@@ -1,7 +1,7 @@
-import { AddItemPlanData } from '../../../data'
-import { AddItemPlanController } from '../../../presentation'
-import { AddItemPlanMysql, AddItemPlanPagarme, AXIOS, connection } from '../../../infra'
-import { DateUtils } from '../../../utils'
+import { AddItemPlanData } from '@/data'
+import { AddItemPlanController } from '@/presentation'
+import { AddItemPlanMysql, AddItemPlanPagarme, AXIOS, connection } from '@/infra'
+import { DateUtils } from '@/utils'
 
 export const addItemPlanFactory = (): AddItemPlanController => {
 	const addItemPlanGateway = new AddItemPlanPagarme(AXIOS)
