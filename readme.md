@@ -385,6 +385,8 @@ Acesse o dashboard e siga os passos a seguir:
 - Express 4.18.2
 - Moment 2.29.4
 - MySQL 2.18.1
+- Module alias 2.2.2
+- Swagger UI express 4.6.0
 
 ## Autor
 
