@@ -1,5 +1,6 @@
 import { UpdateItemSignatureUseCase } from '../../../domain'
-import { serverError, success } from '../../helpers'
+import { MissingParamError } from '../../errors'
+import { badRequest, serverError, success } from '../../helpers'
 import { Controller, HttpRequest, HttpResponse } from '../../protocols'
 
 export class UpdateItemSignatureController implements Controller {
@@ -12,6 +13,14 @@ export class UpdateItemSignatureController implements Controller {
 	async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
 		try {
 			const { idSubscription, idItem } = httpRequest.params
+
+			const requiredFields: string[] = ['name', 'quantity', 'description', 'pricing_scheme']
+
+			for (const field of requiredFields) {
+				if (!httpRequest.body[field]) {
+					return badRequest(new MissingParamError(field))
+				}
+			}
 
 			const itemSignature = await this.updateItemSignatureUseCase.update(
 				idSubscription,
