@@ -1,5 +1,6 @@
+import 'module-alias/register'
 import { app, env } from './config'
-import { connection, CreateTable } from '../infra/database'
+import { connection, CreateTable } from '@/infra'
 
 connection.connect((error: any) => {
 	if (!error) {
