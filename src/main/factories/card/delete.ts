@@ -1,5 +1,6 @@
 import { DeleteCardData } from '../../../data'
 import { DeleteCardController } from '../../../presentation'
+import { RequestUtils } from '../../../utils'
 import {
 	DeleteCardPagarme,
 	AXIOS,
@@ -15,7 +16,9 @@ export const deleteCardFactory = (): DeleteCardController => {
 
 	const deleteCardUseCase = new DeleteCardData(deleteCardGateway, deleteCardRepository)
 
-	const ligSignatureGateway = new ListSignaturesPagarme(AXIOS)
+	const requestUtils = new RequestUtils()
 
-	return new DeleteCardController(deleteCardUseCase, ligSignatureGateway)
+	const listSignatureGateway = new ListSignaturesPagarme(AXIOS, requestUtils)
+
+	return new DeleteCardController(deleteCardUseCase, listSignatureGateway)
 }
