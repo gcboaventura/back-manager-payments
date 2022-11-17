@@ -32,7 +32,7 @@ services:
     volumes:
       - ./db-data:/var/lib/mysql
     ports:
-      - '3307:3306'
+      - '3307:${PORT}'
     command: --default-authentication-plugin=mysql_native_password
     cap_add:
       - SYS_NICE
