@@ -9,7 +9,7 @@
 		"start": "node dist/main/server.js",
 		"build": "rimraf dist && tsc && yarn start",
 		"format": "prettier --write src/**",
-		"up": "yarn build && docker-compose up"
+		"up": "rimraf dist && tsc && docker-compose up"
 	},
 	"devDependencies": {
 		"@types/axios": "^0.14.0",
