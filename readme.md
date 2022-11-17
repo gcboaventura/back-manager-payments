@@ -349,10 +349,6 @@ yarn dev
 yarn build
 ```
 
-```
-yarn start
-```
-
 #### **Docker**
 
 ```
