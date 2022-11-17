@@ -1,0 +1,44 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: api-container
+    build: .
+    restart: always
+    image: back-manager-payments
+    command: yarn start
+    ports:
+      - '${PORT}:${PORT}'
+    volumes:
+      - ./dist:/usr/src/back-manager-payments/dist
+    environment:
+      - PORT=${PORT}
+      - DB_HOST=mysql
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_TIMEZONE=${DB_TIMEZONE}
+      - DB_DATABASE=${DB_DATABASE}
+      - PAGARME_ENDPOINT=${PAGARME_ENDPOINT}
+      - PAGARME_SECRET_KEY=${PAGARME_SECRET_KEY}
+      - PAGARME_PUBLIC_KEY=${PAGARME_PUBLIC_KEY}
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: mysql-container
+    restart: always
+    image: mysql:8.0.28
+    volumes:
+      - ./db-data:/var/lib/mysql
+    ports:
+      - '3307:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    cap_add:
+      - SYS_NICE
+    environment:
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - TZ=${DB_TIMEZONE}
