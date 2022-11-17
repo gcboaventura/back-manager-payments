@@ -1,13 +1,7 @@
 FROM node:18.12.1
 
-WORKDIR /usr/src/back-manager-paymnents
+WORKDIR /usr/src/back-manager-payments
 
-COPY package.json .
+COPY ./package.json .
 
 RUN yarn --only=prod
-
-COPY ./dist ./dist
-
-EXPOSE 4000
-
-CMD yarn start
