@@ -8,7 +8,8 @@
 		"dev": "nodemon src/main/server.ts",
 		"start": "node dist/main/server.js",
 		"build": "rimraf dist && tsc",
-		"format": "prettier --write src/**"
+		"format": "prettier --write src/**",
+		"up": "yarn build && docker-compose up"
 	},
 	"devDependencies": {
 		"@types/axios": "^0.14.0",
