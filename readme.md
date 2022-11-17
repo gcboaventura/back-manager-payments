@@ -356,11 +356,7 @@ yarn start
 #### **Docker**
 
 ```
-docker build -t back-manager-payments .
-```
-
-```
-docker run -p 4000:4000 back-manager-payments
+yarn up
 ```
 
 Obs: O Docker não está configurando para subir um container com o banco de dados.
